@@ -66,8 +66,8 @@ function setSkill(){
 
     details=details.substring(i);
 
-    console.log(details);
-    console.log(tech)
+    // console.log(details);
+    // console.log(tech)
     techimg.setAttribute('src',url);
     techinfo.innerHTML=`<span class="text-4xl">${tech}</span>`+details;
     techname.innerText=tech;
@@ -118,6 +118,7 @@ function gotomail(){
 }
 
 function scrollToTop() {
+    console.log('hehe')
     window.scrollTo({
         top: 0,
         behavior: 'smooth'

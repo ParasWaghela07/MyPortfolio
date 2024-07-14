@@ -23,7 +23,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
+
 
         .darkgray{
             color: var(--dark-color);
@@ -97,12 +99,12 @@
     </style>
 </head>
 <body>
-    <div class="w-[100vw] h-[100vh] overflow-x-hidden" style="background-color: var(--dark-color);">
+    <div class="w-[100vw] h-[100vh] overflow-x-hidden scroll-smooth" style="background-color: var(--dark-color);">
         <!-- NAVBAR -->
         <div class=" w-full  flex justify-center items-center py-6">
             <div class="w-[80%] max-w-[1200px] flex sm:justify-end justify-center gap-7 flex-wrap" style="color: var(--gray-color);">
             <a class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" href="#">Skills</p>
-            <a class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" href="#">Contact me</p>
+            <a class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" href="#footer">Contact me</p>
             </div>
         </div>
         
@@ -159,8 +161,8 @@
                         <img src="./images/lcLogo.png" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
                         <img src="./images/gfg.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
                     </div>
-                    <div class="text-3xl font-extralight flex w-full justify-evenly gap-x-7" style="color: var(--lightGray-color);">
-                        <p onclick="gotocc()" class="hover:text-white transition duration-200">Visit</p>
+                    <div class="text-3xl font-extralight flex w-full justify-evenly gap-x-7" style="color: var(--gray-color);">
+                        <p onclick="gotocc()" class="hover:text-white transition duration-200 ">Visit</p>
                         <p onclick="gotolc()" class="hover:text-white transition duration-200">Visit</p>
                         <p onclick="gotogfg()" class="hover:text-white transition duration-200">Visit</p>
                     </div>
@@ -177,7 +179,7 @@
          <div class="w-full h-[1px] mt-20" style="background-color: var(--lightGray-color);"></div>
 
          <!-- FOOTER -->
-         <div class="max-w-[1400px] w-[90%] mx-auto h-[10vh] mt-1 gap-5 flex justify-between items-center flex-col sm:flex-row mb-10 sm:mb-0" style="color:var(--lightGray-color)">
+         <div class="max-w-[1400px] w-[90%] mx-auto h-[10vh] mt-1 gap-5 flex justify-between items-center flex-col sm:flex-row mb-10 sm:mb-0" style="color:var(--gray-color)" id="footer">
             <div class="h-full hover:text-white transition duration-200 flex justify-center items-center" onclick="scrollToTop()">Back To Top</div>
             <div class="h-full w-[50%] flex items-center justify-center gap-x-10 sm:justify-end text-white">
                 <i class="fa-regular fa-envelope hover:text-[#ADADAD] text-3xl sm:text-4xl" onclick="gotomail()"></i>
