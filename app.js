@@ -114,7 +114,7 @@ function gotoli(){
 }
 
 function gotomail(){
-    window.open('mailto:paraswaghela777@gmail.com?subject=Interact%20with%20me');
+    window.open('mailto:paras.w@somaiya.edu?subject=Interact%20with%20me');
 }
 
 function gotop(){
