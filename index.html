@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    
     <style>
         :root{
             --dark-color:#131313;
@@ -176,12 +177,12 @@
          <div class="w-full h-[1px] mt-20" style="background-color: var(--lightGray-color);"></div>
 
          <!-- FOOTER -->
-         <div class="max-w-[1400px] w-[90%] mx-auto h-[10vh] mt-1 flex justify-between items-center flex-col sm:flex-row" style="color:var(--lightGray-color)">
-            <div class="h-full hover:text-white transition duration-200 flex justify-center items-center" onclick="gotop()">Back To Top</div>
-            <div class="h-full w-[50%] flex items-center gap-x-10 justify-end text-white">
-                <i class="fa-regular fa-envelope hover:text-[#ADADAD]" onclick="gotomail()"></i>
-                <i class="fa-brands fa-github hover:text-[#ADADAD]" onclick="gotogithub()"></i>
-                <i class="fa-brands fa-linkedin hover:text-[#ADADAD]" onclick="gotoli()"></i>
+         <div class="max-w-[1400px] w-[90%] mx-auto h-[10vh] mt-1 gap-5 flex justify-between items-center flex-col sm:flex-row mb-10 sm:mb-0" style="color:var(--lightGray-color)">
+            <div class="h-full hover:text-white transition duration-200 flex justify-center items-center" onclick="scrollToTop()">Back To Top</div>
+            <div class="h-full w-[50%] flex items-center justify-center gap-x-10 sm:justify-end text-white">
+                <i class="fa-regular fa-envelope hover:text-[#ADADAD] text-3xl sm:text-4xl" onclick="gotomail()"></i>
+                <i class="fa-brands fa-github hover:text-[#ADADAD] text-3xl sm:text-4x" onclick="gotogithub()"></i>
+                <i class="fa-brands fa-linkedin hover:text-[#ADADAD] text-3xl sm:text-4x" onclick="gotoli()"></i>
             </div>
          </div>
 

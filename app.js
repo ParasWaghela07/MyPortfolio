@@ -117,11 +117,9 @@ function gotomail(){
     window.open('mailto:paras.w@somaiya.edu?subject=Interact%20with%20me');
 }
 
-function gotop(){
-    window.scroll({
+function scrollToTop() {
+    window.scrollTo({
         top: 0,
-        left: 0,
         behavior: 'smooth'
-      });
-      
+    });
 }
