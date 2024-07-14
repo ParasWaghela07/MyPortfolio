@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --dark-color:#131313;
+            --gray-color:#ADADAD;
+            --lightGray-color:rgba(173, 173, 173, 0.2667);
+        }
+        *,::after*,::before*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .darkgray{
+            color: var(--dark-color);
+        }
+
+        .Gray{
+            color: var(--gray-color);
+        }
+
+        .lightgray{
+            color: var(--lightGray-color);
+        }
+
+        .slide1{
+            animation: slideA 2s;
+        }
+
+        @keyframes slideA {
+            0%{
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+        }
+
+        .roboto-slab{
+            font-family: "Roboto Slab", serif;
+            font-optical-sizing: auto;
+            font-weight: 400; /* Replace with your desired font weight */
+            font-style: normal;
+
+        }
+
+        .mulish{
+            font-family: "Mulish", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .slideR{
+            animation: slideRight 1s;
+        }
+
+        .slideL{
+            animation: slideLeft 1s;
+        }
+        .slideU{
+            animation: slideUp 1s;
+        }
+        @keyframes slideLeft {
+            0%{
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+        }
+        @keyframes slideRight {
+            0%{
+                transform: translateX(50px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes slideUp {
+            0%{
+                transform: translateY(20px);
+                opacity: 0;
+            }
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="w-[100vw] h-[100vh] overflow-x-hidden" style="background-color: var(--dark-color);">
+        <!-- NAVBAR -->
+        <div class=" w-full  flex justify-center items-center py-6">
+            <div class="w-[80%] max-w-[1200px] flex sm:justify-end justify-center gap-7 flex-wrap" style="color: var(--gray-color);">
+            <a class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" href="#">Skills</p>
+            <a class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" href="#">Contact me</p>
+            </div>
+        </div>
+        
+        <!-- HERO-SECTION -->
+        <div class="max-w-[1200px] w-[80%] mx-auto flex  justify-center lg:justify-around items-center  lg:mt-20 flex-wrap ">
+            <div>
+                <p class="hidden lg:block  text-5xl text-[#747474] leading-[60px]  roboto-slab font-semibold slide1">Welcome <br> To <br> My <br> Portfolio</p>
+            </div>
+            <div>
+                <img src="./images/magicpattern-blob-1720808616133.png" alt="" class="md:w-[500px] md:h-[500px]">
+            </div>
+            <div>
+                <p class=" sm:text-2xl text-[#747474] mulish slide1 animate-pulse">res.status(200).json({ <br> <br>
+
+                    Name:`Paras Waghela`, <br> <br>
+                   
+                    Role:`Full Stack Developer` <br> <br>
+                   
+                    )}</p>
+            </div>
+        </div>
+
+        <!-- MY TECHSTACK -->
+         <div class="max-w-[1200px] w-[80%] mx-auto mt-20 flex flex-col gap-y-10">
+            <div class="flex w-full justify-center items-center gap-20 py-5">
+                <div class="w-[20%] h-[2px] hidden md:block" style="background-color: var(--lightGray-color);"></div>
+                <p class=" text-4xl lg:text-5xl" style="color:var(--gray-color)">My TechStack</p>
+                <div class="w-[20%] h-[2px] bg-red-300 md:block hidden" style="background-color: var(--lightGray-color);"></div>
+            </div>
+
+            <div class="w-full flex  justify-center gap-x-20 flex-col items-center md:items-start md:flex-row">
+                <img src="./images/html.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px]" id="techimg">
+                <p class="text-white w-full md:w-[40%] text-2xl hidden sm:block" id="techinfo"> <span class="text-4xl">HTML</span> serves as the fundamental structure for webpages, making it easier for me to integrate with CSS, JavaScript, and various CSS libraries.</p>
+                <p class="sm:hidden text-3xl text-white mt-2" id="techname">HTML</p>
+            </div>
+
+            <div class="w-full flex justify-center items-center gap-x-10">
+                <button id="left"><i class="fa-solid fa-arrow-left text-3xl lg:text-4xl text-white hover:text-[#ADADAD]"></i></button>
+                <button id="right"><i class="fa-solid fa-arrow-right text-white text-3xl lg:text-4xl hover:text-[#ADADAD]"></i></button>
+            </div>
+         </div>
+
+         <!-- DSA -->
+         <div class="max-w-[1200px] w-[80%] mx-auto mt-20 gap-y-10 flex flex-col">
+            <div class="flex w-full justify-center items-center gap-20 py-5">
+                <div class="w-[20%] h-[2px] hidden lg:block" style="background-color: var(--lightGray-color);"></div>
+                <p class="text-4xl lg:text-5xl" style="color:var(--gray-color)">Data Structures <br>& Algorithms</p>
+                <div class="w-[20%] h-[2px] bg-red-300 lg:block hidden" style="background-color: var(--lightGray-color);"></div>
+            </div>
+            <div class="flex w-full items-center justify-between flex-col lg:flex-row gap-10">
+                <div class="w-full lg:w-[45%] flex flex-col items-center gap-y-5 h-full">
+                    <div class="flex w-full justify-evenly">
+                        <img src="./images/codechef.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
+                        <img src="./images/lcLogo.png" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
+                        <img src="./images/gfg.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
+                    </div>
+                    <div class="text-3xl font-extralight flex w-full justify-evenly gap-x-7" style="color: var(--lightGray-color);">
+                        <p onclick="gotocc()" class="hover:text-white transition duration-200">Visit</p>
+                        <p onclick="gotolc()" class="hover:text-white transition duration-200">Visit</p>
+                        <p onclick="gotogfg()" class="hover:text-white transition duration-200">Visit</p>
+                    </div>
+                </div>
+                <div class="w-full text-white flex flex-col gap-y-5 lg:w-[45%] text-xl md:text-2xl items-center lg:items-start">
+                    <p class="text-2xl md:text-3xl">Solved 400+ problems across different platforms:</p>
+                    <p> - LeetCode</p>
+                    <p> - CodeChef</p>
+                    <p> - GeeksforGeeks</p>
+                </div>
+            </div>
+         </div>
+
+         <div class="w-full h-[1px] mt-20" style="background-color: var(--lightGray-color);"></div>
+
+         <!-- FOOTER -->
+         <div class="max-w-[1400px] w-[90%] mx-auto h-[10vh] mt-1 flex justify-between items-center flex-col sm:flex-row" style="color:var(--lightGray-color)">
+            <div class="h-full hover:text-white transition duration-200 flex justify-center items-center" onclick="gotop()">Back To Top</div>
+            <div class="h-full w-[50%] flex items-center gap-x-10 justify-end text-white">
+                <i class="fa-regular fa-envelope hover:text-[#ADADAD]" onclick="gotomail()"></i>
+                <i class="fa-brands fa-github hover:text-[#ADADAD]" onclick="gotogithub()"></i>
+                <i class="fa-brands fa-linkedin hover:text-[#ADADAD]" onclick="gotoli()"></i>
+            </div>
+         </div>
+
+
+    </div>
+<script src="https://kit.fontawesome.com/75c175432b.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="app.js"></script>
+</body>
+</html>
