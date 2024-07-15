@@ -3,6 +3,13 @@ const techinfo=document.querySelector('#techinfo');
 const techname=document.querySelector('#techname');
 const left =document.querySelector('#left');
 const right=document.querySelector('#right');
+
+const go_to_skills=document.querySelector('#gotoskills')
+const go_to_contactme=document.querySelector('#gotocm');
+const footer=document.querySelector('#footer');
+
+const myskills=document.querySelector('#myskills');
+
 const techimages=[
     "html.png","CSS.png","javas2.png","Tailwind.png","mongodb.png","Express.png","newReact.png","NodeJs.svg","github.png"
 ]
@@ -129,11 +136,22 @@ function gotomail(){
     window.open('mailto:paras.w@somaiya.edu?subject=Interact%20with%20me');
 }
 
-function scrollToTop() {
-    console.log('hehe')
+go_to_skills.addEventListener('click',function(e){
+    myskills.scrollIntoView({
+        behavior:'smooth'
+    })
+})
+
+go_to_contactme.addEventListener('click',(e)=>{
+    footer.scrollIntoView({
+        behavior:'smooth'
+    })
+})
+
+footer.addEventListener('click',function(e){
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
-}
+})
 

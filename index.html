@@ -98,13 +98,13 @@
        
     </style>
 </head>
-<body>
-    <div class="w-[100vw] h-[100vh] overflow-x-hidden scroll-smooth" style="background-color: var(--dark-color);">
+<body class="overflow-x-hidden">
+    <div class="w-[100vw] h-[100%] " style="background-color: var(--dark-color);">
         <!-- NAVBAR -->
         <div class=" w-full  flex justify-center items-center py-6">
             <div class="w-[80%] max-w-[1200px] flex sm:justify-end justify-center gap-7 flex-wrap" style="color: var(--gray-color);">
-            <a class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" href="#">Skills</p>
-            <a class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" href="#">Contact me</p>
+            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" id="gotoskills">Skills</p>
+            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" id="gotocm">Contact me</p>
             </div>
         </div>
         
@@ -128,7 +128,7 @@
         </div>
 
         <!-- MY TECHSTACK -->
-         <div class="max-w-[1200px] w-[80%] mx-auto mt-20 flex flex-col gap-y-10">
+         <div class="max-w-[1200px] w-[80%] mx-auto mt-20 flex flex-col gap-y-10" id="myskills">
             <div class="flex w-full justify-center items-center gap-20 py-5">
                 <div class="w-[20%] h-[2px] hidden md:block" style="background-color: var(--lightGray-color);"></div>
                 <p class=" text-4xl lg:text-5xl" style="color:var(--gray-color)">My TechStack</p>
@@ -179,8 +179,10 @@
          <div class="w-full h-[1px] mt-20" style="background-color: var(--lightGray-color);"></div>
 
          <!-- FOOTER -->
-         <div class="max-w-[1400px] w-[90%] mx-auto h-[10vh] mt-1 gap-5 flex justify-between items-center flex-col sm:flex-row mb-10 sm:mb-0" style="color:var(--gray-color)" id="footer">
-            <div class="h-full hover:text-white transition duration-200 flex justify-center items-center" onclick="scrollToTop()">Back To Top</div>
+         <div class="max-w-[1400px] w-[90%] mx-auto py-5  mt-1 gap-5 flex justify-between items-center flex-col sm:flex-row" style="color:var(--gray-color)">
+            <div class="h-full hover:text-white transition duration-200 flex justify-center items-center cursor-pointer text-3xl" id="footer">
+                Back To Top
+            </div>
             <div class="h-full w-[50%] flex items-center justify-center gap-x-10 sm:justify-end text-white">
                 <i class="fa-regular fa-envelope hover:text-[#ADADAD] text-3xl sm:text-4xl" onclick="gotomail()"></i>
                 <i class="fa-brands fa-github hover:text-[#ADADAD] text-3xl sm:text-4x" onclick="gotogithub()"></i>
