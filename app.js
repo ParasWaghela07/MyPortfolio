@@ -22,6 +22,8 @@ const techdetails=[
 
 let index=0;
 
+
+
 function refreshRightAnimation(){
     techimg.classList.remove('slideR','slideL')
     void techimg.offsetWidth;
@@ -73,7 +75,17 @@ function setSkill(){
     techname.innerText=tech;
 }
 
+function refresh(){
+    while(index<techimages.length){
+        setSkill();
+        index++;
+    }
+    index=0;
+}
+
+refresh();
 setSkill();
+
 
 right.addEventListener('click',(e)=>{
     if(index==techimages.length-1) index=0;
@@ -124,3 +136,4 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
