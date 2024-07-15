@@ -82,16 +82,15 @@ function setSkill(){
     techname.innerText=tech;
 }
 
-function refresh(){
+document.addEventListener('DOMContentLoaded', function() {
     while(index<techimages.length){
         setSkill();
         index++;
     }
     index=0;
-}
+    setSkill();
+});
 
-refresh();
-setSkill();
 
 
 right.addEventListener('click',(e)=>{
