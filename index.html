@@ -15,7 +15,7 @@
     
     <style>
         :root{
-            --dark-color:#131313;
+            --dark-color:#131313f0;
             --gray-color:#ADADAD;
             --lightGray-color:rgba(173, 173, 173, 0.2667);
         }
@@ -120,6 +120,21 @@
             }
         }
 
+        #typeWrite{
+            overflow: hidden;
+            white-space: nowrap ;
+            animation: typing 3s ease-in;
+        }
+
+        @keyframes typing {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+
        
     </style>
 </head>
@@ -129,28 +144,44 @@
         <div class=" w-full  flex justify-center items-center py-6">
             <div class="w-[80%] max-w-[1200px] flex sm:justify-end justify-center gap-7 flex-wrap" style="color: var(--gray-color);">
             <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" id="gotoskills">Skills</p>
+            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" id="gotoabt">About</p>
             <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" id="gotocm">Contact me</p>
             </div>
         </div>
         
         <!-- HERO-SECTION -->
-        <div class="max-w-[1200px] w-[80%] mx-auto flex  justify-center lg:justify-around items-center  lg:mt-20 flex-wrap">
+        <div class="max-w-[1200px] w-[80%] mx-auto flex  justify-center lg:justify-around items-center lg:mt-20 flex-wrap">
             <div class="leftAnime">
                 <p class="hidden lg:block  text-5xl text-[#747474] leading-[60px]  roboto-slab font-semibold slide1">Welcome <br> To <br> My <br> Portfolio</p>
             </div>
             <div>
                 <img src="./images/magicpattern-blob-1720808616133.png" alt="" class="md:w-[500px] md:h-[500px]">
             </div>
-            <div class="rightAnime">
-                <p class=" sm:text-2xl  mulish slide1 animate-pulse" style="color:var(--gray-color)">res.status(200).json({ <br> <br>
-
-                    Name:`Paras Waghela`, <br> <br>
-                   
-                    Role:`Full Stack Developer` <br> <br>
-                   
-                    )}</p>
+            <div class="flex flex-col gap-5">
+                    <p class=" sm:text-2xl  mulish animate-pulse" id="typeWrite" style="color:var(--gray-color)">res.status(200).json({</p>
+                    <p class=" sm:text-2xl  mulish animate-pulse" id="typeWrite" style="color:var(--gray-color)">Name:`Paras Waghela`,</p>
+                    <p class=" sm:text-2xl  mulish animate-pulse" id="typeWrite" style="color:var(--gray-color)">Role:`Full Stack Developer`</p>
+                    <p class=" sm:text-2xl  mulish animate-pulse" id="typeWrite" style="color:var(--gray-color)">)}</p>
             </div>
         </div>
+
+        <!-- ABOUT ME -->
+         <div class="max-w-[1200px] w-[80%] mx-auto flex flex-col gap-y-5 mulish mt-10" id="aboutme">
+            <div class="flex w-full justify-center items-center gap-20 py-5">
+                <div class="w-[20%] h-[2px] hidden md:block" style="background-color: var(--lightGray-color);"></div>
+                <p class=" text-4xl lg:text-5xl" style="color:var(--gray-color)">About Me</p>
+                <div class="w-[20%] h-[2px] bg-red-300 md:block hidden" style="background-color: var(--lightGray-color);"></div>
+            </div>
+            <div class="flex flex-col lg:flex-row w-full  justify-around items-center gap-10">
+                <img src="./images/aboutme.png" alt="" class="sm:w-[450px] sm:h-[400px] leftAnime">
+
+                <div class="w-full lg:w-[40%] flex flex-col text-white text-xl gap-y-5 leading-7 rightAnime">
+                    <p><span class="text-5xl">I'm</span> Paras Waghela, a B.Tech student specializing in Computer Engineering. I have built a solid foundation in the MERN stack and refined my skills by tackling numerous coding challenges and developing innovative solutions.</p>
+                    <p>I take pride in writing clean, maintainable code and thrive in collaborative environments where teamwork and communication are essential. My passion for development and problem-solving motivates me to continually seek new technical challenges and growth opportunities.</p>
+                    <p>I am committed to staying current with industry trends and best practices, ensuring that my skills remain sharp and relevant.</p>
+                </div>
+            </div>
+         </div>
 
         <!-- MY TECHSTACK -->
          <div class="max-w-[1200px] w-[80%] mx-auto mt-20 flex flex-col gap-y-10" id="myskills">
@@ -207,8 +238,8 @@
                         </div> 
 
                 </div>
-                <div class="w-full text-white flex flex-col gap-y-5 lg:w-[45%] text-xl md:text-2xl items-center lg:items-start rightAnime">
-                    <p class="text-2xl md:text-3xl">Solved 400+ problems across different platforms:</p>
+                <div class="w-full text-white flex flex-col gap-y-5 lg:w-[45%] text-xl md:text-xl items-center lg:items-start rightAnime">
+                    <p class="text-2xl md:text-3xl"><span class="text-4xl">Solved</span> 400+ problems across different platforms:</p>
                     <p> - LeetCode</p>
                     <p> - CodeChef</p>
                     <p> - GeeksforGeeks</p>
@@ -219,14 +250,18 @@
          <div class="w-full h-[1px] mt-20" style="background-color: var(--lightGray-color);"></div>
 
          <!-- FOOTER -->
-         <div class="max-w-[1400px] w-[90%] mx-auto py-5  mt-1 gap-5 flex justify-between items-center flex-col sm:flex-row" style="color:var(--gray-color)">
-            <div class="h-full hover:text-white transition duration-200 flex justify-center items-center cursor-pointer text-3xl leftAnime" id="footer">
+         <div class="max-w-[1400px] w-[90%] mx-auto py-5 mt-1 gap-5 flex justify-between items-center flex-col md:flex-row" style="color:var(--gray-color)">
+
+            <div class="h-full hover:text-white transition duration-200 flex justify-center items-center cursor-pointer text-3xl leftAnime md:order-1" id="footer">
                 Back To Top
             </div>
-            <div class="h-full w-[50%] flex items-center justify-center gap-x-10 sm:justify-end text-white rightAnime">
-                <i class="fa-regular fa-envelope hover:text-[#ADADAD] text-3xl sm:text-4xl" onclick="gotomail()"></i>
-                <i class="fa-brands fa-github hover:text-[#ADADAD] text-3xl sm:text-4x" onclick="gotogithub()"></i>
-                <i class="fa-brands fa-linkedin hover:text-[#ADADAD] text-3xl sm:text-4x" onclick="gotoli()"></i>
+
+            <p class="order-5 md:order-2">Designed and build by Paras Waghela, 2024 All rights reserved.</p>
+
+            <div class="h-full flex items-center justify-center gap-x-10 sm:justify-end text-white rightAnime md:order-3">
+                <i class="fa-regular fa-envelope hover:text-[#ADADAD] text-3xl sm:text-4xl cursor-pointer" onclick="gotomail()"></i>
+                <i class="fa-brands fa-github hover:text-[#ADADAD] text-3xl sm:text-4x cursor-pointer" onclick="gotogithub()"></i>
+                <i class="fa-brands fa-linkedin hover:text-[#ADADAD] text-3xl sm:text-4x cursor-pointer" onclick="gotoli()"></i>
             </div>
          </div>
 

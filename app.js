@@ -4,6 +4,9 @@ const techname=document.querySelector('#techname');
 const left =document.querySelector('#left');
 const right=document.querySelector('#right');
 
+const go_to_abt=document.querySelector('#gotoabt');
+const abt=document.querySelector('#aboutme')
+
 const go_to_skills=document.querySelector('#gotoskills')
 const go_to_contactme=document.querySelector('#gotocm');
 const footer=document.querySelector('#footer');
@@ -80,9 +83,19 @@ function setSkillImage(){
     currTech.classList.remove('hidden');
 }
 
+// function modechange(){
+//     const root = document.documentElement;
+
+//     root.style.setProperty('--dark-color','white')
+//     root.style.setProperty('--gray-color','black')
+//     root.style.setProperty('--lightGray-color','#131313f0')
+// }
 
 
 
+// setInterval(()=>{
+//     right.click();
+// },10000)
 
 right.addEventListener('click',(e)=>{
     currTech.classList.add('hidden')
@@ -140,6 +153,12 @@ function gotomail(){
     window.open('mailto:paras.w@somaiya.edu?subject=Interact%20with%20me');
 }
 
+go_to_abt.addEventListener('click',function(e){
+    abt.scrollIntoView({
+        behavior:'smooth'
+    })
+})
+
 go_to_skills.addEventListener('click',function(e){
     myskills.scrollIntoView({
         behavior:'smooth'
@@ -167,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const observerOptions = {
         root: null, // Use the viewport as the root
-        rootMargin: `0px 0px 20% 0px`, // Adjust this margin to trigger earlier
+        rootMargin: `0px 0px 7% 0px`, // Adjust this margin to trigger earlier
         threshold: 0.01 // Trigger when 1% of the element is visible
       };
 
