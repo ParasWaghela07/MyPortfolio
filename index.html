@@ -26,6 +26,9 @@
             scroll-behavior: smooth;
         }
 
+        body::-webkit-scrollbar {
+            display: none;
+        }
 
         .darkgray{
             color: var(--dark-color);
@@ -77,21 +80,43 @@
         }
         @keyframes slideLeft {
             0%{
-                transform: translateX(-50px);
                 opacity: 0;
+                transform: translateX(-50px);
+
             }
         }
         @keyframes slideRight {
             0%{
-                transform: translateX(50px);
                 opacity: 0;
+                transform: translateX(50px);
+
             }
         }
 
         @keyframes slideUp {
             0%{
-                transform: translateY(20px);
                 opacity: 0;
+                transform: translateY(20px);
+
+            }
+        }
+
+        .cright{
+            animation: comeRight 1s;
+        }
+
+        .cleft{
+            animation: comeLeft 1s;
+        }
+        @keyframes comeLeft {
+            0%{
+                transform:translateX(-1000px);
+            }
+        }
+
+        @keyframes comeRight {
+            0%{
+                transform:translateX(1000px);
             }
         }
 
@@ -109,14 +134,14 @@
         </div>
         
         <!-- HERO-SECTION -->
-        <div class="max-w-[1200px] w-[80%] mx-auto flex  justify-center lg:justify-around items-center  lg:mt-20 flex-wrap ">
-            <div>
+        <div class="max-w-[1200px] w-[80%] mx-auto flex  justify-center lg:justify-around items-center  lg:mt-20 flex-wrap">
+            <div class="leftAnime">
                 <p class="hidden lg:block  text-5xl text-[#747474] leading-[60px]  roboto-slab font-semibold slide1">Welcome <br> To <br> My <br> Portfolio</p>
             </div>
             <div>
                 <img src="./images/magicpattern-blob-1720808616133.png" alt="" class="md:w-[500px] md:h-[500px]">
             </div>
-            <div>
+            <div class="rightAnime">
                 <p class=" sm:text-2xl  mulish slide1 animate-pulse" style="color:var(--gray-color)">res.status(200).json({ <br> <br>
 
                     Name:`Paras Waghela`, <br> <br>
@@ -136,17 +161,17 @@
             </div>
 
             <div class="w-full flex  justify-center gap-x-20 flex-col items-center md:items-start md:flex-row">
-                <img src="./images/html.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg1">
-                <img src="./images/CSS.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg2">
-                <img src="./images/javas2.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg3">
-                <img src="./images/Tailwind.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg4">
-                <img src="./images/mongodb.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg5">
-                <img src="./images/Express.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg6">
-                <img src="./images/newReact.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg7">
-                <img src="./images/NodeJs.svg" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg8">
-                <img src="./images/github.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg9">
+                <img src="./images/html.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden leftAnime" id="techimg1">
+                <img src="./images/CSS.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden leftAnime" id="techimg2">
+                <img src="./images/javas2.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden leftAnime" id="techimg3">
+                <img src="./images/Tailwind.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden leftAnime" id="techimg4">
+                <img src="./images/mongodb.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden leftAnime" id="techimg5">
+                <img src="./images/Express.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden leftAnime" id="techimg6">
+                <img src="./images/newReact.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden leftAnime" id="techimg7">
+                <img src="./images/NodeJs.svg" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden leftAnime" id="techimg8">
+                <img src="./images/github.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden leftAnime" id="techimg9">
 
-                <p class="text-white w-full md:w-[40%] text-2xl hidden sm:block" id="techinfo"> <span class="text-4xl">HTML</span> serves as the fundamental structure for webpages, making it easier for me to integrate with CSS, JavaScript, and various CSS libraries.</p>
+                <p class="text-white w-full md:w-[40%] text-2xl hidden sm:block techinfotext rightAnime" id="techinfo"> <span class="text-4xl">HTML</span> serves as the fundamental structure for webpages, making it easier for me to integrate with CSS, JavaScript, and various CSS libraries.</p>
                 <p class="sm:hidden text-3xl text-white mt-2" id="techname">HTML</p>
             </div>
 
@@ -164,19 +189,25 @@
                 <div class="w-[20%] h-[2px] bg-red-300 lg:block hidden" style="background-color: var(--lightGray-color);"></div>
             </div>
             <div class="flex w-full items-center justify-between flex-col lg:flex-row gap-10">
-                <div class="w-full lg:w-[45%] flex flex-col items-center gap-y-5 h-full">
-                    <div class="flex w-full justify-evenly">
-                        <img src="./images/codechef.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
-                        <img src="./images/lcLogo.png" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
-                        <img src="./images/gfg.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
-                    </div>
-                    <div class="text-3xl font-extralight flex w-full justify-evenly gap-x-7" style="color: var(--gray-color);">
-                        <p onclick="gotocc()" class="hover:text-white transition duration-200 ">Visit</p>
-                        <p onclick="gotolc()" class="hover:text-white transition duration-200">Visit</p>
-                        <p onclick="gotogfg()" class="hover:text-white transition duration-200">Visit</p>
-                    </div>
+                <div class="w-full lg:w-[45%] flex h-full justify-evenly leftAnime" style="color: var(--gray-color);">
+
+                        <div class="flex flex-col justify-center items-center gap-y-5">
+                            <img src="./images/codechef.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
+                            <p onclick="gotocc()" class="hover:text-white transition duration-200 text-2xl font-extralight cursor-pointer">Visit</p>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center gap-y-5">
+                            <img src="./images/lcLogo.png" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
+                            <p onclick="gotolc()" class="hover:text-white transition duration-200  text-2xl font-extralight cursor-pointer">Visit</p>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center gap-y-5">
+                            <img src="./images/gfg.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
+                            <p onclick="gotogfg()" class="hover:text-white transition duration-200  text-2xl font-extralight cursor-pointer">Visit</p>
+                        </div> 
+
                 </div>
-                <div class="w-full text-white flex flex-col gap-y-5 lg:w-[45%] text-xl md:text-2xl items-center lg:items-start">
+                <div class="w-full text-white flex flex-col gap-y-5 lg:w-[45%] text-xl md:text-2xl items-center lg:items-start rightAnime">
                     <p class="text-2xl md:text-3xl">Solved 400+ problems across different platforms:</p>
                     <p> - LeetCode</p>
                     <p> - CodeChef</p>
@@ -189,10 +220,10 @@
 
          <!-- FOOTER -->
          <div class="max-w-[1400px] w-[90%] mx-auto py-5  mt-1 gap-5 flex justify-between items-center flex-col sm:flex-row" style="color:var(--gray-color)">
-            <div class="h-full hover:text-white transition duration-200 flex justify-center items-center cursor-pointer text-3xl" id="footer">
+            <div class="h-full hover:text-white transition duration-200 flex justify-center items-center cursor-pointer text-3xl leftAnime" id="footer">
                 Back To Top
             </div>
-            <div class="h-full w-[50%] flex items-center justify-center gap-x-10 sm:justify-end text-white">
+            <div class="h-full w-[50%] flex items-center justify-center gap-x-10 sm:justify-end text-white rightAnime">
                 <i class="fa-regular fa-envelope hover:text-[#ADADAD] text-3xl sm:text-4xl" onclick="gotomail()"></i>
                 <i class="fa-brands fa-github hover:text-[#ADADAD] text-3xl sm:text-4x" onclick="gotogithub()"></i>
                 <i class="fa-brands fa-linkedin hover:text-[#ADADAD] text-3xl sm:text-4x" onclick="gotoli()"></i>
