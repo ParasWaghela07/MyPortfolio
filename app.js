@@ -30,10 +30,24 @@ const techdetails=[
 let index=0;
 let currTech=document.querySelector(techimages[index]);
 
-function refreshAnimation(){
-    currTech.classList.remove('cleft')
+function refreshLeftAnimation(){
+    currTech.classList.remove('slideL','slideR','cleft')
     void currTech.offsetWidth;
-    currTech.classList.add('cleft');
+    currTech.classList.add('slideL');
+
+    techinfo.classList.remove('slideR','slideL','cright')
+    void techinfo.offsetWidth;
+    techinfo.classList.add('slideL');
+
+    techname.classList.remove('slideU')
+    void techname.offsetWidth;
+    techname.classList.add('slideU');
+}
+
+function refreshRightAnimation(){
+    currTech.classList.remove('slideL','slideR','cleft')
+    void currTech.offsetWidth;
+    currTech.classList.add('slideR');
 
     techinfo.classList.remove('slideR','slideL','cright')
     void techinfo.offsetWidth;
@@ -80,7 +94,7 @@ right.addEventListener('click',(e)=>{
     setSkillImage();
     setSkillinfo();
     
-    refreshAnimation();
+    refreshRightAnimation();
 })
 
 
@@ -94,7 +108,7 @@ left.addEventListener('click',(e)=>{
     setSkillImage();
     setSkillinfo();
 
-    refreshAnimation();
+    refreshLeftAnimation();
 
 
 })
