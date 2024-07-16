@@ -11,7 +11,7 @@ const footer=document.querySelector('#footer');
 const myskills=document.querySelector('#myskills');
 
 const techimages=[
-    "html.png","CSS.png","javas2.png","Tailwind.png","mongodb.png","Express.png","newReact.png","NodeJs.svg","github.png"
+    "techimg1","techimg2","techimg3","techimg4","techimg5","techimg6","techimg7","techimg8","techimg9"
 ]
 const techdetails=[
     "HTML serves as the fundamental structure for webpages, making it easier for me to integrate with CSS, JavaScript, and various CSS libraries.",
@@ -28,13 +28,14 @@ const techdetails=[
 
 
 let index=0;
+let currTech=document.querySelector(techimages[index]);
 
 
 
 function refreshRightAnimation(){
-    techimg.classList.remove('slideR','slideL')
-    void techimg.offsetWidth;
-    techimg.classList.add('slideR');
+    currTech.classList.remove('slideR','slideL')
+    void currTech.offsetWidth;
+    currTech.classList.add('slideR');
 
     techinfo.classList.remove('slideR','slideL')
     void techinfo.offsetWidth;
@@ -46,9 +47,9 @@ function refreshRightAnimation(){
 }
 
 function refreshLeftAnimation(){
-    techimg.classList.remove('slideR','slideL')
-    void techimg.offsetWidth;
-    techimg.classList.add('slideL');
+    currTech.classList.remove('slideR','slideL')
+    void currTech.offsetWidth;
+    currTech.classList.add('slideL');
 
     techinfo.classList.remove('slideR','slideL')
     void techinfo.offsetWidth;
@@ -60,10 +61,8 @@ function refreshLeftAnimation(){
 
 }
 
-function setSkill(){
-    let url='./images/'+techimages[index];
+function setSkillinfo(){
     let details=techdetails[index];
-
     let tech="";
 
     let i=0;
@@ -75,41 +74,50 @@ function setSkill(){
 
     details=details.substring(i);
 
-    // console.log(details);
-    // console.log(tech)
-    techimg.setAttribute('src',url);
     techinfo.innerHTML=`<span class="text-4xl">${tech}</span>`+details;
     techname.innerText=tech;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    while(index<techimages.length){
-        setSkill();
-        index++;
-    }
-    index=0;
-    setSkill();
-});
+function setSkillImage(){
+    currTech=document.querySelector('#'+techimages[index]);
+    currTech.classList.remove('hidden');
+}
+
+
 
 
 
 right.addEventListener('click',(e)=>{
+    currTech.classList.add('hidden')
+
     if(index==techimages.length-1) index=0;
     else index++;
 
+    
+    setSkillImage();
+    setSkillinfo();
+    
     refreshRightAnimation();
-
-    setSkill();
 })
 
+
+
 left.addEventListener('click',(e)=>{
+
+    currTech.classList.add('hidden')
+
     if(index==0) index=techimages.length-1;
     else index--;
+    setSkillImage();
+    setSkillinfo();
 
     refreshLeftAnimation();
 
-    setSkill();
+
 })
+
+setSkillImage();
+setSkillinfo();
 
 function gotocc(){
     window.open('https://www.codechef.com/users/paraswaghela77');
