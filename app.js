@@ -133,6 +133,22 @@ function gotocc(){
     window.open('https://www.codechef.com/users/paraswaghela77');
 }
 
+function gotomapgame(){
+    window.open('https://paraswaghela07.github.io/MINI-PROJECT/map_game/map.html')
+}
+
+function gotomathgame(){
+    window.open('https://paraswaghela07.github.io/MINI-PROJECT/memory_math/homepage.html');
+}
+
+function gotomaprepo(){
+    window.open('https://github.com/ParasWaghela07/MINI-PROJECT/tree/main/map_game')
+}
+
+function gotomathrepo(){
+    window.open('https://github.com/ParasWaghela07/MEMORY_MATH');
+}
+
 function gotolc(){
     window.open('https://leetcode.com/u/paraswaghela777/')
 }
@@ -165,6 +181,11 @@ go_to_skills.addEventListener('click',function(e){
     })
 })
 
+function gotoprojects(){
+    document.querySelector('#myprojects').scrollIntoView({
+        behavior:'smooth'
+    })
+}
 go_to_contactme.addEventListener('click',(e)=>{
     footer.scrollIntoView({
         behavior:'smooth'

@@ -123,7 +123,7 @@
         #typeWrite{
             overflow: hidden;
             white-space: nowrap ;
-            animation: typing 3s ease-in;
+            animation: typing 3s ease;
         }
 
         @keyframes typing {
@@ -135,15 +135,47 @@
             }
         }
 
+        .shadowDrop{
+            text-shadow: 1.5px 1.5px 1px white;
+
+        }
+
+        .project{
+            position: relative;
+        z-index: 1;
+        transition: 0.5s;
+        background-color: rgb(45, 45, 45);
+        }
+
+        .project::before {
+            content: "";
+            position: absolute;
+            background-color: var(--lightGray-color);
+            border-radius:5px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: scaleX(0);
+            transform-origin:top;
+            transition: 0.8s;
+            z-index: -1;
+        }
+
+        .project:hover::before{
+            transform: scaleX(1);
+        }
+
        
     </style>
 </head>
 <body class="overflow-x-hidden">
     <div class="w-[100vw] h-[100%] " style="background-color: var(--dark-color);">
         <!-- NAVBAR -->
-        <div class=" w-full  flex justify-center items-center py-6">
+        <div class=" w-full flex justify-center items-center py-6">
             <div class="w-[80%] max-w-[1200px] flex sm:justify-end justify-center gap-7 flex-wrap" style="color: var(--gray-color);">
             <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" id="gotoskills">Skills</p>
+            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" onclick="gotoprojects()">Projects</p>
             <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" id="gotoabt">About</p>
             <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" id="gotocm">Contact me</p>
             </div>
@@ -152,16 +184,16 @@
         <!-- HERO-SECTION -->
         <div class="max-w-[1200px] w-[80%] mx-auto flex  justify-center lg:justify-around items-center lg:mt-20 flex-wrap">
             <div class="leftAnime">
-                <p class="hidden lg:block  text-5xl text-[#747474] leading-[60px]  roboto-slab font-semibold slide1">Welcome <br> To <br> My <br> Portfolio</p>
+                <p class="hidden lg:block  text-5xl text-[#747474] leading-[60px]  roboto-slab font-semibold hover:text-white transition duration-300 shadowDrop">Welcome <br> To <br> My <br> Portfolio</p>
             </div>
             <div>
                 <img src="./images/magicpattern-blob-1720808616133.png" alt="" class="md:w-[500px] md:h-[500px]">
             </div>
             <div class="flex flex-col gap-5">
-                    <p class=" sm:text-2xl  mulish animate-pulse" id="typeWrite" style="color:var(--gray-color)">res.status(200).json({</p>
-                    <p class=" sm:text-2xl  mulish animate-pulse" id="typeWrite" style="color:var(--gray-color)">Name:`Paras Waghela`,</p>
-                    <p class=" sm:text-2xl  mulish animate-pulse" id="typeWrite" style="color:var(--gray-color)">Role:`Full Stack Developer`</p>
-                    <p class=" sm:text-2xl  mulish animate-pulse" id="typeWrite" style="color:var(--gray-color)">)}</p>
+                    <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">res.status(200).json({</p>
+                    <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">Name:`Paras Waghela`,</p>
+                    <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">Role:`Full Stack Developer`</p>
+                    <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">)}</p>
             </div>
         </div>
 
@@ -243,6 +275,61 @@
                     <p> - LeetCode</p>
                     <p> - CodeChef</p>
                     <p> - GeeksforGeeks</p>
+                </div>
+            </div>
+         </div>
+
+         <!-- PROJECTS -->
+         <div class="max-w-[750px] xl:max-w-[1200px] w-[80%] mx-auto mt-20 gap-y-10 flex flex-col" id="myprojects">
+            <div class="flex w-full justify-center items-center gap-20 py-5">
+                <div class="w-[20%] h-[2px] hidden lg:block" style="background-color: var(--lightGray-color);"></div>
+                <p class="text-4xl lg:text-5xl" style="color:var(--gray-color)">My Projects</p>
+                <div class="w-[20%] h-[2px] bg-red-300 lg:block hidden" style="background-color: var(--lightGray-color);"></div>
+            </div>
+            <div class="w-full flex flex-col xl:flex-row justify-around gap-y-7">
+
+                <div class="w-full xl:w-[45%] flex flex-col py-4 px-4 rounded-lg gap-y-3 leftAnime project">
+                    <img src="./images/map_game.jpg" alt="" class="h-[45%] rounded-lg">
+
+                    <div class="flex flex-col justify-between h-[55%] gap-y-7 xl:gap-y-2">
+                        <div>
+                            <div class="flex justify-between items-center">
+                                <div class="text-white mulish font-bold text-2xl">MAP TRACK</div>
+                                <div class="flex justify-center items-center gap-x-2">
+                                    <i class="fa-solid fa-link text-3xl hover:animate-ping cursor-pointer" style="color: #ffffff;" onclick="gotomapgame()"></i>
+                                    <img src="./images/github.png" alt="" class="w-[55px] hover:animate-ping cursor-pointer" onclick="gotomaprepo()">
+                                </div>
+                            </div>
+                            <div class="text-xl text-white" style="color: var(--gray-color);">
+                                is a geographical challenge where players must locate a specified Indian state on an SVG-rendered map of India, ensuring they do not lose more than three lives. Let us test your general knowledge—how many states can you find correctly?
+                            </div>
+                        </div>
+                        <div class="text-lg text-white mulish font-light">
+                            TECH STACK - HTML , CSS , JAVASCRIPT
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full xl:w-[45%] flex flex-col py-4 px-4 rounded-lg gap-y-3 leftAnime project">
+                    <img src="./images/math_game.jpg" alt="" class="h-[45%] rounded-lg">
+
+                    <div class="flex flex-col justify-between h-[55%] gap-y-7 xl:gap-y-2">
+                        <div>
+                            <div class="flex justify-between items-center">
+                                <div class="text-white mulish font-bold text-2xl">MEMORY MATH</div>
+                                <div class="flex justify-center items-center gap-x-2">
+                                    <i class="fa-solid fa-link text-3xl hover:animate-ping cursor-pointer" style="color: #ffffff;" onclick="gotomathgame()"></i>
+                                    <img src="./images/github.png" alt="" class="w-[55px] hover:animate-ping cursor-pointer" onclick="gotomathrepo()">
+                                </div>
+                            </div>
+                            <div class="text-xl text-white" style="color: var(--gray-color);">
+                                is a mental math booster where you need to perform arithmetic operations. The challenge intensifies as numbers and operations start disappearing. Can you succeed without using pen and paper?
+                            </div>
+                        </div>
+                        <div class="text-lg text-white mulish font-light">
+                            TECH STACK - HTML , CSS , JAVASCRIPT
+                        </div>
+                    </div>
                 </div>
             </div>
          </div>
