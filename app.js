@@ -149,6 +149,14 @@ function gotomathrepo(){
     window.open('https://github.com/ParasWaghela07/MEMORY_MATH');
 }
 
+function gotocartrepo(){
+    window.open('https://github.com/ParasWaghela07/Shopping-Cart');
+}
+
+// function gotocartgame(){
+//     window.open('https://shopping-cart-ten-liard.vercel.app/');
+// }
+
 function gotolc(){
     window.open('https://leetcode.com/u/paraswaghela777/')
 }
