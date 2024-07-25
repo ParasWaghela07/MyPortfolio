@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paras Waghela : Developer</title>
+    <title>Paras Waghela: The Developer</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/cv.png" type="image/x-icon">
     
     <style>
         :root{
@@ -42,16 +43,6 @@
             color: var(--lightGray-color);
         }
 
-        .slide1{
-            animation: slideA 2s;
-        }
-
-        @keyframes slideA {
-            0%{
-                transform: translateX(-100px);
-                opacity: 0;
-            }
-        }
 
         .roboto-slab{
             font-family: "Roboto Slab", serif;
@@ -101,24 +92,6 @@
             }
         }
 
-        .cright{
-            animation: comeRight 1s;
-        }
-
-        .cleft{
-            animation: comeLeft 1s;
-        }
-        @keyframes comeLeft {
-            0%{
-                transform:translateX(-1000px);
-            }
-        }
-
-        @keyframes comeRight {
-            0%{
-                transform:translateX(1000px);
-            }
-        }
 
         #typeWrite{
             overflow: hidden;
@@ -135,12 +108,8 @@
             }
         }
 
-        .shadowDrop{
-            text-shadow: 1.5px 1.5px 1px white;
-        }
-
         .project{
-            position: relative;
+        position: relative;
         z-index: 1;
         transition: 0.5s;
         background-color: rgb(45, 45, 45);
@@ -165,6 +134,81 @@
             transform: scaleX(1);
         }
 
+        @keyframes appearL {
+            from{
+                transform: translateX(-100vw);
+                scale:0.1;
+            }
+            to{
+                opacity: 1;
+                scale:1
+            }
+        }
+
+        @keyframes appearR {
+            from{
+                transform: translateX(100vw);
+                scale:0.1;
+            }
+            to{
+                opacity: 1;
+                scale:1
+            }
+        }
+
+        @keyframes appear{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        .appL{
+            animation: appearL linear;
+            animation-timeline:view();
+            animation-range:entry 0 cover 40%;
+        }
+
+        .appR{
+            animation: appearR linear;
+            animation-timeline:view();
+            animation-range:entry 0 cover 40%;
+        }
+
+        .app{
+            animation: appear ease-in-out;
+            animation-timeline:view();
+            animation-range:entry 0 cover 40%;
+        }
+
+        .op{
+            animation: appear 1s ease-in;
+        }
+
+        @keyframes up {
+            from{
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        .appU{
+            animation: up 0.2s linear;
+        }
+
+        .appU1{
+            animation: up 0.4s linear;
+        }
+        .appU2{
+            animation: up 0.6s linear;
+        }
+        .appU3{
+            animation: up 0.8s linear;
+        }
        
     </style>
 </head>
@@ -173,19 +217,19 @@
         <!-- NAVBAR -->
         <div class=" w-full flex justify-center items-center py-6">
             <div class="w-[80%] max-w-[1200px] flex sm:justify-end justify-center gap-7 flex-wrap" style="color: var(--gray-color);">
-            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" id="gotoskills">Skills</p>
-            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" onclick="gotoprojects()">Projects</p>
-            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" id="gotoabt">About</p>
-            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200" id="gotocm">Contact me</p>
+            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU" id="gotoskills">Skills</p>
+            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU1" onclick="gotoprojects()">Projects</p>
+            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU2" id="gotoabt">About</p>
+            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU3" id="gotocm">Contact me</p>
             </div>
         </div>
         
         <!-- HERO-SECTION -->
         <div class="max-w-[1200px] w-[80%] mx-auto flex  justify-center lg:justify-around items-center lg:mt-20 flex-wrap">
-            <div class="leftAnime">
+            <div class="slideL">
                 <p class="hidden lg:block  text-5xl text-[#747474] leading-[60px]  roboto-slab font-semibold hover:text-white transition duration-300">Welcome <br> To <br> My <br> Portfolio</p>
             </div>
-            <div>
+            <div class="op">
                 <img src="./images/magicpattern-blob-1720808616133.png" alt="" class="md:w-[500px] md:h-[500px]">
             </div>
             <div class="flex flex-col gap-5">
@@ -197,16 +241,16 @@
         </div>
 
         <!-- ABOUT ME -->
-         <div class="max-w-[1200px] w-[80%] mx-auto flex flex-col gap-y-5 mulish mt-10" id="aboutme">
-            <div class="flex w-full justify-center items-center gap-20 py-5">
+         <div class="max-w-[1200px] w-[80%] mx-auto flex flex-col gap-y-5 mulish lg:mt-20" id="aboutme">
+            <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden md:block" style="background-color: var(--lightGray-color);"></div>
                 <p class=" text-4xl lg:text-5xl" style="color:var(--gray-color)">About Me</p>
                 <div class="w-[20%] h-[2px] bg-red-300 md:block hidden" style="background-color: var(--lightGray-color);"></div>
             </div>
             <div class="flex flex-col lg:flex-row w-full  justify-around items-center gap-10">
-                <img src="./images/aboutme.png" alt="" class="sm:w-[450px] sm:h-[400px] leftAnime">
+                <img src="./images/aboutme.png" alt="" class="sm:w-[450px] sm:h-[400px] appL">
 
-                <div class="w-full lg:w-[40%] flex flex-col text-white text-xl gap-y-5 leading-7 rightAnime">
+                <div class="w-full lg:w-[40%] flex flex-col text-white text-xl gap-y-5 leading-7 appR">
                     <p><span class="text-5xl">I'm</span> Paras Waghela, a B.Tech student specializing in Computer Engineering. I have built a solid foundation in the MERN stack and refined my skills by tackling numerous coding challenges and developing innovative solutions.</p>
                     <p>I take pride in writing clean, maintainable code and thrive in collaborative environments where teamwork and communication are essential. My passion for development and problem-solving motivates me to continually seek new technical challenges and growth opportunities.</p>
                     <p>I am committed to staying current with industry trends and best practices, ensuring that my skills remain sharp and relevant.</p>
@@ -216,13 +260,13 @@
 
         <!-- MY TECHSTACK -->
          <div class="max-w-[1200px] w-[80%] mx-auto mt-20 flex flex-col gap-y-10" id="myskills">
-            <div class="flex w-full justify-center items-center gap-20 py-5">
+            <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden md:block" style="background-color: var(--lightGray-color);"></div>
                 <p class=" text-4xl lg:text-5xl" style="color:var(--gray-color)">My TechStack</p>
                 <div class="w-[20%] h-[2px] bg-red-300 md:block hidden" style="background-color: var(--lightGray-color);"></div>
             </div>
 
-            <div class="w-full flex  justify-center gap-x-20 flex-col items-center md:items-start md:flex-row">
+            <div class="w-full flex  justify-center gap-x-20 flex-col items-center md:items-start md:flex-row appL">
                 <img src="./images/html.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg1">
                 <img src="./images/CSS.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg2">
                 <img src="./images/javas2.png" alt="" class="w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] hidden" id="techimg3">
@@ -237,7 +281,7 @@
                 <p class="sm:hidden text-3xl text-white mt-2" id="techname">HTML</p>
             </div>
 
-            <div class="w-full flex justify-center items-center gap-x-10">
+            <div class="w-full flex justify-center items-center gap-x-10 appR">
                 <button id="left"><i class="fa-solid fa-arrow-left text-3xl lg:text-4xl text-white hover:text-[#ADADAD]"></i></button>
                 <button id="right"><i class="fa-solid fa-arrow-right text-white text-3xl lg:text-4xl hover:text-[#ADADAD]"></i></button>
             </div>
@@ -245,13 +289,13 @@
 
          <!-- DSA -->
          <div class="max-w-[1200px] w-[80%] mx-auto mt-20 gap-y-10 flex flex-col">
-            <div class="flex w-full justify-center items-center gap-20 py-5">
+            <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden lg:block" style="background-color: var(--lightGray-color);"></div>
                 <p class="text-4xl lg:text-5xl" style="color:var(--gray-color)">Data Structures <br>& Algorithms</p>
                 <div class="w-[20%] h-[2px] bg-red-300 lg:block hidden" style="background-color: var(--lightGray-color);"></div>
             </div>
             <div class="flex w-full items-center justify-between flex-col lg:flex-row gap-10">
-                <div class="w-full lg:w-[45%] flex h-full justify-evenly leftAnime" style="color: var(--gray-color);">
+                <div class="w-full lg:w-[45%] flex h-full justify-evenly appL" style="color: var(--gray-color);">
 
                         <div class="flex flex-col justify-center items-center gap-y-5">
                             <img src="./images/codechef.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
@@ -269,7 +313,7 @@
                         </div> 
 
                 </div>
-                <div class="w-full text-white flex flex-col gap-y-5 lg:w-[45%] text-xl md:text-xl items-center lg:items-start rightAnime">
+                <div class="w-full text-white flex flex-col gap-y-5 lg:w-[45%] text-xl md:text-xl items-center lg:items-start appR">
                     <p class="text-2xl md:text-3xl"><span class="text-4xl">Solved</span> 400+ problems across different platforms:</p>
                     <p> - LeetCode</p>
                     <p> - CodeChef</p>
@@ -280,7 +324,7 @@
 
          <!-- PROJECTS -->
          <div class="max-w-[750px] xl:max-w-[1200px] w-[80%] mx-auto mt-20 gap-y-10 flex flex-col" id="myprojects">
-            <div class="flex w-full justify-center items-center gap-20 py-5">
+            <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden lg:block" style="background-color: var(--lightGray-color);"></div>
                 <p class="text-4xl lg:text-5xl" style="color:var(--gray-color)">My Projects</p>
                 <div class="w-[20%] h-[2px] bg-red-300 lg:block hidden" style="background-color: var(--lightGray-color);"></div>
@@ -288,7 +332,7 @@
 
             <!-- ROW-1 -->
             <div class="w-full flex flex-col xl:flex-row justify-around gap-y-7">
-                <div class="w-full xl:w-[45%] flex flex-col py-4 px-4 rounded-lg gap-y-3 leftAnime project">
+                <div class="w-full xl:w-[45%] flex flex-col py-4 px-4 rounded-lg gap-y-3 leftAnime project appL">
                     <img src="./images/sc_auth.png" alt="" class="h-[45%] rounded-lg">
 
                     <div class="flex flex-col justify-between h-[55%] gap-y-7 xl:gap-y-2">
@@ -313,7 +357,7 @@
             <!-- ROW-2 -->
             <div class="w-full flex flex-col xl:flex-row justify-around gap-y-7">
 
-                <div class="w-full xl:w-[45%] flex flex-col py-4 px-4 rounded-lg gap-y-3 leftAnime project">
+                <div class="w-full xl:w-[45%] flex flex-col py-4 px-4 rounded-lg gap-y-3 leftAnime project appL">
                     <img src="./images/map_game.jpg" alt="" class="h-[45%] rounded-lg">
 
                     <div class="flex flex-col justify-between h-[55%] gap-y-7 xl:gap-y-2">
@@ -335,7 +379,7 @@
                     </div>
                 </div>
 
-                <div class="w-full xl:w-[45%] flex flex-col py-4 px-4 rounded-lg gap-y-3 leftAnime project">
+                <div class="w-full xl:w-[45%] flex flex-col py-4 px-4 rounded-lg gap-y-3 leftAnime project appR">
                     <img src="./images/math_game.jpg" alt="" class="h-[45%] rounded-lg">
 
                     <div class="flex flex-col justify-between h-[55%] gap-y-7 xl:gap-y-2">

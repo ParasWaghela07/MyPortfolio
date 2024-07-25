@@ -34,11 +34,11 @@ let index=0;
 let currTech=document.querySelector(techimages[index]);
 
 function refreshLeftAnimation(){
-    currTech.classList.remove('slideL','slideR','cleft')
+    currTech.classList.remove('slideL','slideR')
     void currTech.offsetWidth;
     currTech.classList.add('slideL');
 
-    techinfo.classList.remove('slideR','slideL','cright')
+    techinfo.classList.remove('slideR','slideL')
     void techinfo.offsetWidth;
     techinfo.classList.add('slideL');
 
@@ -48,11 +48,11 @@ function refreshLeftAnimation(){
 }
 
 function refreshRightAnimation(){
-    currTech.classList.remove('slideL','slideR','cleft')
+    currTech.classList.remove('slideL','slideR')
     void currTech.offsetWidth;
     currTech.classList.add('slideR');
 
-    techinfo.classList.remove('slideR','slideL','cright')
+    techinfo.classList.remove('slideR','slideL')
     void techinfo.offsetWidth;
     techinfo.classList.add('slideR');
 
@@ -208,36 +208,4 @@ footer.addEventListener('click',function(e){
 })
 
 
-document.addEventListener('DOMContentLoaded', function () {
 
-    const leftAnime=document.querySelectorAll('.leftAnime');
-    const rightAnime=document.querySelectorAll('.rightAnime');
-
-    const observerOptions = {
-        root: null, // Use the viewport as the root
-        rootMargin: `0px 0px 7% 0px`, // Adjust this margin to trigger earlier
-        threshold: 0.01 // Trigger when 1% of the element is visible
-      };
-
-      const observer1 = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('cleft');
-            observer.unobserve(entry.target); // Stop observing once the animation is triggered
-          }
-        });
-      }, observerOptions);
-
-      const observer2 = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('cright');
-            observer.unobserve(entry.target); // Stop observing once the animation is triggered
-          }
-        });
-      }, observerOptions);
-
-      leftAnime.forEach(e=>observer1.observe(e))
-      rightAnime.forEach(e=>observer2.observe(e))
-
-  });
