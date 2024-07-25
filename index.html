@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="./images/cv.png" type="image/x-icon">
     
     <style>
+        
         :root{
             --dark-color:#0f0f0f;
             --gray-color:#ADADAD;
@@ -96,7 +97,7 @@
         #typeWrite{
             overflow: hidden;
             white-space: nowrap ;
-            animation: typing 3s ease;
+            animation: typing 3s 0.5s ease;
         }
 
         @keyframes typing {
@@ -183,10 +184,6 @@
             animation-range:entry 0 cover 30%;
         }
 
-        .op{
-            animation: appear 1s ease-in;
-        }
-
         @keyframes up {
             from{
                 opacity: 0;
@@ -217,22 +214,22 @@
         <!-- NAVBAR -->
         <div class=" w-full flex justify-center items-center py-6">
             <div class="w-[80%] max-w-[1200px] flex sm:justify-end justify-center gap-7 flex-wrap" style="color: var(--gray-color);">
-            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU" id="gotoskills">Skills</p>
-            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU1" onclick="gotoprojects()">Projects</p>
-            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU2" id="gotoabt">About</p>
-            <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU3" id="gotocm">Contact me</p>
-            </div>
+                <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU" onclick="gotomyskills()">Skills</p>
+                <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU1" onclick="gotoprojects()">Projects</p>
+                <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU2" onclick="gotoabout()">About</p>
+                <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU3" onclick="gotocontactme()">Contact me</p>
+                </div>
         </div>
         
         <!-- HERO-SECTION -->
         <div class="max-w-[1200px] w-[80%] mx-auto flex  justify-center lg:justify-around items-center lg:mt-20 flex-wrap">
-            <div class="slideL">
+            <div id="welcome">
                 <p class="hidden lg:block  text-5xl text-[#747474] leading-[60px]  roboto-slab font-semibold hover:text-white transition duration-300">Welcome <br> To <br> My <br> Portfolio</p>
             </div>
-            <div class="op">
+            <div class="" id="myimg">
                 <img src="./images/magicpattern-blob-1720808616133.png" alt="" class="md:w-[500px] md:h-[500px]">
             </div>
-            <div class="flex flex-col gap-5">
+            <div class="flex flex-col gap-5" id="res">
                     <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">res.status(200).json({</p>
                     <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">Name:`Paras Waghela`,</p>
                     <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">Role:`Full Stack Developer`</p>
@@ -425,8 +422,10 @@
 
 
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://kit.fontawesome.com/75c175432b.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="app.js"></script>
+<script src="animation.js"></script>
 </body>
 </html>

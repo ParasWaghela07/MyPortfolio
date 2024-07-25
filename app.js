@@ -4,13 +4,8 @@ const techname=document.querySelector('#techname');
 const left =document.querySelector('#left');
 const right=document.querySelector('#right');
 
-const go_to_abt=document.querySelector('#gotoabt');
 const abt=document.querySelector('#aboutme')
-
-const go_to_skills=document.querySelector('#gotoskills')
-const go_to_contactme=document.querySelector('#gotocm');
 const footer=document.querySelector('#footer');
-
 const myskills=document.querySelector('#myskills');
 
 const techimages=[
@@ -177,28 +172,28 @@ function gotomail(){
     window.open('mailto:paras.w@somaiya.edu?subject=Interact%20with%20me');
 }
 
-go_to_abt.addEventListener('click',function(e){
+function gotoabout(){
     abt.scrollIntoView({
         behavior:'smooth'
     })
-})
+}
 
-go_to_skills.addEventListener('click',function(e){
+function gotomyskills(){
     myskills.scrollIntoView({
         behavior:'smooth'
     })
-})
+}
 
 function gotoprojects(){
     document.querySelector('#myprojects').scrollIntoView({
         behavior:'smooth'
     })
 }
-go_to_contactme.addEventListener('click',(e)=>{
+function gotocontactme(){
     footer.scrollIntoView({
         behavior:'smooth'
     })
-})
+}
 
 footer.addEventListener('click',function(e){
     window.scrollTo({
