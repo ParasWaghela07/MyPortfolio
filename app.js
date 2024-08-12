@@ -78,19 +78,6 @@ function setSkillImage(){
     currTech.classList.remove('hidden');
 }
 
-// function modechange(){
-//     const root = document.documentElement;
-
-//     root.style.setProperty('--dark-color','white')
-//     root.style.setProperty('--gray-color','black')
-//     root.style.setProperty('--lightGray-color','#131313f0')
-// }
-
-
-
-// setInterval(()=>{
-//     right.click();
-// },10000)
 
 right.addEventListener('click',(e)=>{
     currTech.classList.add('hidden')
@@ -148,6 +135,10 @@ function gotocartrepo(){
     window.open('https://github.com/ParasWaghela07/Shopping-Cart');
 }
 
+function gotonotesrepo(){
+    window.open('https://github.com/ParasWaghela07/NotesApp');
+}
+
 // function gotocartgame(){
 //     window.open('https://shopping-cart-ten-liard.vercel.app/');
 // }
@@ -195,12 +186,6 @@ function gotocontactme(){
     })
 }
 
-footer.addEventListener('click',function(e){
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-})
 
 
 

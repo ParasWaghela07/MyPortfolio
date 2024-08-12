@@ -349,6 +349,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="w-full xl:w-[45%] flex flex-col py-4 px-4 rounded-lg gap-y-3 leftAnime project appR">
+                    <img src="./images/notesapp.png" alt="" class="h-[45%] rounded-lg">
+
+                    <div class="flex flex-col justify-between h-[55%] gap-y-7 xl:gap-y-2">
+                        <div>
+                            <div class="flex justify-between items-center">
+                                <div class="text-white mulish font-bold text-2xl">Notes Manager</div>
+                                <div class="flex justify-center items-center gap-x-2">
+                                    <img src="./images/github.png" alt="" class="w-[55px] hover:opacity-70 transition duration-200 cursor-pointer" onclick="gotonotesrepo()">
+                                </div>
+                            </div>
+                            <div class="text-xl text-white" style="color: var(--gray-color);">
+                                is a tool with smooth sign-in and authentication, ensuring your notes are securely saved. You can create, update, and manage your notes seamlessly.
+                            </div>
+                        </div>
+                        <div class="text-lg text-white mulish font-light">
+                            TECH STACK - MONGODB , EXPRESSJS , REACTJS , NODEJS , TAILWIND-CSS
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- ROW-2 -->
@@ -405,13 +425,14 @@
          <div class="w-full h-[1px] mt-20" style="background-color: var(--lightGray-color);"></div>
 
          <!-- FOOTER -->
-         <div class="max-w-[1400px] w-[90%] mx-auto py-5 mt-1 gap-5 flex justify-between items-center flex-col md:flex-row" style="color:var(--gray-color)">
+         <div class="max-w-[1400px] w-[90%] mx-auto py-5 mt-1 gap-5 flex justify-between items-center flex-col md:flex-row" id="footer">
 
-            <div class="h-full hover:text-white transition duration-200 flex justify-center items-center cursor-pointer text-3xl leftAnime md:order-1" id="footer">
-                Back To Top
+            <div class="h-full text-white flex justify-center items-center text-3xl leftAnime md:order-1 gap-1">
+                <img src="./images/loc.png" alt="" class="w-[30px]">
+                <p>Mumbai</p>
             </div>
 
-            <p class="order-5 md:order-2">Designed and build by Paras Waghela, 2024 All rights reserved.</p>
+            <p class="order-5 md:order-2" style="color:var(--gray-color)">Designed and build by Paras Waghela, 2024 All rights reserved.</p>
 
             <div class="h-full flex items-center justify-center gap-x-10 sm:justify-end text-white rightAnime md:order-3">
                 <i class="fa-regular fa-envelope hover:text-[#ADADAD] text-3xl sm:text-4xl cursor-pointer" onclick="gotomail()"></i>
