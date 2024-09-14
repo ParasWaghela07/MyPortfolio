@@ -116,7 +116,11 @@
         background-color: rgb(45, 45, 45);
         }
 
-        .project::before {
+        .project:hover{
+            background-color: var(--lightGray-color);
+        }
+
+        /* .project::before {
             content: "";
             position: absolute;
             background-color: var(--lightGray-color);
@@ -133,7 +137,7 @@
 
         .project:hover::before{
             transform: scaleX(1);
-        }
+        } */
 
         @keyframes appearL {
             from{
