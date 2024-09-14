@@ -226,12 +226,12 @@
         </div>
         
         <!-- HERO-SECTION -->
-        <div class="max-w-[1200px] w-[80%] mx-auto flex  justify-center lg:justify-around items-center lg:mt-20 flex-wrap">
-            <div id="welcome">
-                <p class="hidden lg:block  text-5xl text-[#747474] leading-[60px] roboto-slab font-semibold hover:text-white transition duration-300">Hello, It's <br> Paras Waghela</p>
+        <div class="max-w-[1200px] w-[90%] mx-auto flex flex-col-reverse  justify-center lg:justify-around items-center lg:flex-row lg:mt-20">
+            <div id="welcome" class="md:w-[50%] w-full text-center md:text-left">
+                <p class="lg:text-5xl text-2xl w-full text-[#747474] leading-[60px] roboto-slab font-semibold hover:text-white transition duration-300">Hello, It's <br> <span class="role "></span></p>
             </div>
             <div class="" id="myimg">
-                <img src="./images/magicpattern-blob-1720808616133.png" alt="" class="md:w-[500px] md:h-[500px]">
+                <img src="./images/magicpattern-blob-1720808616133.png" alt="" class="md:w-[450px] md:h-[450px]">
             </div>
             <!-- <div class="flex flex-col gap-5" id="res">
                     <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">res.status(200).json({</p>
@@ -454,5 +454,17 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="app.js"></script>
 <script src="animation.js"></script>
+<script>
+            var typeData = new Typed(".role",{
+            strings:[
+                "Paras Waghela",
+                "Full Stack Developer"
+            ],
+            loop:true,
+            typeSpeed:50,
+            backSpeed:50,
+            backDelay:1000,
+        });
+</script>
 </body>
 </html>
