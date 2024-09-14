@@ -9,13 +9,9 @@ const footer=document.querySelector('#footer');
 const myskills=document.querySelector('#myskills');
 
 const techimages=[
-    "techimg1","techimg2","techimg3","techimg4","techimg5","techimg6","techimg7","techimg8","techimg9","techimg10","techimg11","techimg12"
+    "techimg5","techimg6","techimg7","techimg8","techimg9","techimg10","techimg11","techimg12","techimg1","techimg2","techimg3","techimg4"
 ]
 const techdetails=[
-    "HTML serves as the fundamental structure for webpages, making it easier for me to integrate with CSS, JavaScript, and various CSS libraries.",
-    "CSS allows me to style and design webpages, enhancing their visual appeal and layout.",
-    "JavaScript enables me to add interactive elements and dynamic features to webpages, making them more engaging.",
-    "Tailwind-CSS offers a utility-first approach to styling, enabling me to quickly build custom designs without writing custom CSS.",
     "MongoDB is my go-to for flexible and scalable NoSQL database solutions, essential for storing and managing data.",
     "ExpressJS provides a robust framework for building web applications and APIs using Node.js, simplifying server-side development.",
     "ReactJS enables me to create dynamic and responsive user interfaces for web applications, making it a powerful tool for front-end development",
@@ -23,7 +19,11 @@ const techdetails=[
     "GitHub serves as my platform for version control, collaboration, and hosting of code repositories.",
     "C++ provides me with a cleaner and more efficient way to tackle online coding problems, especially when it comes to data structures and algorithms.",
     "Vercel provides me with a smoother and easier way to deploy my project's frontend, simplifying both hosting and configuration.",
-    "Render helps me easily host my backend and simplifies the configuration with the frontend, making the deployment process more efficient and manageable."
+    "Render helps me easily host my backend and simplifies the configuration with the frontend, making the deployment process more efficient and manageable.",
+    "HTML serves as the fundamental structure for webpages, making it easier for me to integrate with CSS, JavaScript, and various CSS libraries.",
+    "CSS allows me to style and design webpages, enhancing their visual appeal and layout.",
+    "JavaScript enables me to add interactive elements and dynamic features to webpages, making them more engaging.",
+    "Tailwind-CSS offers a utility-first approach to styling, enabling me to quickly build custom designs without writing custom CSS."
 ]
 
 
