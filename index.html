@@ -141,8 +141,8 @@
 
         @keyframes appearL {
             from{
-                transform: translateX(-100vw);
-                scale:0.1;
+                opacity: 0;
+                scale:0.5;
             }
             to{
                 opacity: 1;
@@ -152,8 +152,8 @@
 
         @keyframes appearR {
             from{
-                transform: translateX(100vw);
-                scale:0.1;
+               opacity: 0;;
+                scale:0.5;
             }
             to{
                 opacity: 1;
@@ -163,6 +163,7 @@
 
         @keyframes appear{
             from{
+                scale:0.1;
                 opacity: 0;
             }
             to{
@@ -242,7 +243,7 @@
         </div>
 
         <!-- ABOUT ME -->
-         <div class="max-w-[1200px] w-[80%] mx-auto flex flex-col gap-y-5 mulish lg:mt-20" id="aboutme">
+         <div class="max-w-[1200px] w-[80%] mx-auto flex flex-col gap-y-5 mulish mt-52" id="aboutme">
             <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden md:block" style="background-color: var(--lightGray-color);"></div>
                 <p class=" text-4xl lg:text-5xl" style="color:var(--gray-color)">About Me</p>
@@ -251,8 +252,8 @@
             <div class="flex flex-col lg:flex-row w-full  justify-around items-center gap-10">
                 <img src="./images/aboutme.png" alt="" class="sm:w-[450px] sm:h-[400px] appL">
 
-                <div class="w-full lg:w-[40%] flex flex-col text-white text-xl gap-y-5 leading-7 appR">
-                    <p><span class="text-5xl">I'm</span> Paras Waghela, a B.Tech student specializing in Computer Engineering. I have built a solid foundation in the MERN stack and refined my skills by tackling numerous coding challenges and developing innovative solutions.</p>
+                <div class="w-full lg:w-[40%] flex flex-col text-white lg:text-xl gap-y-5 leading-7 appR">
+                    <p><span class="text-4xl">I'm</span> Paras Waghela, a B.Tech student specializing in Computer Engineering. I have built a solid foundation in the MERN stack and refined my skills by tackling numerous coding challenges and developing innovative solutions.</p>
                     <p>I take pride in writing clean, maintainable code and thrive in collaborative environments where teamwork and communication are essential. My passion for development and problem-solving motivates me to continually seek new technical challenges and growth opportunities.</p>
                     <p>I am committed to staying current with industry trends and best practices, ensuring that my skills remain sharp and relevant.</p>
                 </div>
@@ -260,7 +261,7 @@
          </div>
 
         <!-- MY TECHSTACK -->
-         <div class="max-w-[1200px] w-[80%] mx-auto mt-20 flex flex-col gap-y-10" id="myskills">
+         <div class="max-w-[1200px] w-[80%] mx-auto mt-52 flex flex-col gap-y-10" id="myskills">
             <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden md:block" style="background-color: var(--lightGray-color);"></div>
                 <p class=" text-4xl lg:text-5xl" style="color:var(--gray-color)">My TechStack</p>
@@ -291,7 +292,7 @@
          </div>
 
          <!-- DSA -->
-         <div class="max-w-[1200px] w-[80%] mx-auto mt-20 gap-y-10 flex flex-col">
+         <div class="max-w-[1200px] w-[80%] mx-auto mt-52 gap-y-10 flex flex-col">
             <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden lg:block" style="background-color: var(--lightGray-color);"></div>
                 <p class="text-4xl lg:text-5xl" style="color:var(--gray-color)">Data Structures <br>& Algorithms</p>
@@ -326,7 +327,7 @@
          </div>
 
          <!-- PROJECTS -->
-         <div class="max-w-[750px] xl:max-w-[1200px] w-[80%] mx-auto mt-20 gap-y-10 flex flex-col" id="myprojects">
+         <div class="max-w-[750px] xl:max-w-[1200px] w-[80%] mx-auto mt-52 gap-y-10 flex flex-col" id="myprojects">
             <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden lg:block" style="background-color: var(--lightGray-color);"></div>
                 <p class="text-4xl lg:text-5xl" style="color:var(--gray-color)">My Projects</p>
