@@ -170,25 +170,35 @@ function gotoabout(){
     abt.scrollIntoView({
         behavior:'smooth'
     })
+    hide();
 }
 
 function gotomyskills(){
     myskills.scrollIntoView({
         behavior:'smooth'
     })
+    hide();
 }
 
 function gotoprojects(){
     document.querySelector('#myprojects').scrollIntoView({
         behavior:'smooth'
     })
+    hide();
 }
 function gotocontactme(){
     footer.scrollIntoView({
         behavior:'smooth'
     })
+    hide();
 }
 
 
+function hide(){
+    document.querySelector('#menubar').classList.add('goback');
+}
 
 
+document.querySelector('#floater').addEventListener('click',()=>{
+    document.querySelector('#menubar').classList.remove('goback');
+})

@@ -211,13 +211,30 @@
         .appU3{
             animation: up 0.8s linear;
         }
+
+        .white-shadow{
+            box-shadow: 0px 0px 7px 1px white;
+        }
+
+        .goback{
+            transform: translateX(-100vw);
+        }
        
     </style>
 </head>
 <body class="overflow-x-hidden">
+    <img src="./images/cv.png" class="rounded-full w-[50px] fixed z-10 cursor-pointer left-5 top-5 sm:hidden animate-bounce" id="floater" >
+    <div class="w-[100vw] h-[100%] bg-[#1a1818f4] fixed z-20 flex flex-col justify-center items-center transition duration-300 goback" id="menubar">
+        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gotomyskills()">Skills</p>
+        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gotoprojects()">Projects</p>
+        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gotoabout()">About</p>
+        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gotocontactme()">Contact me</p>
+        <!-- <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer">Resume</p> -->
+        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="hide()">Back</p>
+    </div>
     <div class="w-[100vw] h-[100%] " style="background-color: var(--dark-color);">
         <!-- NAVBAR -->
-        <div class=" w-full flex justify-center items-center py-6">
+        <div class=" w-full justify-center items-center py-6 opacity-0 sm:opacity-100">
             <div class="w-[80%] max-w-[1200px] flex sm:justify-end justify-center gap-7 flex-wrap" style="color: var(--gray-color);">
                 <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU" onclick="gotomyskills()">Skills</p>
                 <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU1" onclick="gotoprojects()">Projects</p>
@@ -299,23 +316,28 @@
                 <div class="w-[20%] h-[2px] bg-red-300 lg:block hidden" style="background-color: var(--lightGray-color);"></div>
             </div>
             <div class="flex w-full items-center justify-between flex-col lg:flex-row gap-10">
-                <div class="w-full lg:w-[45%] flex h-full justify-evenly appL" style="color: var(--gray-color);">
+                <div class="w-full lg:w-[45%] flex flex-col h-full gap-y-10 items-center appL" style="color: var(--gray-color);">
+                    <div class="w-full flex justify-evenly">
+                        <img src="./images/codechef.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer"
+                            onclick="gotocc()" 
+                            onmouseenter="this.classList.add('white-shadow')" 
+                            onmouseleave="this.classList.remove('white-shadow')">
+                        
 
-                        <div class="flex flex-col justify-center items-center gap-y-5">
-                            <img src="./images/codechef.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
-                            <p onclick="gotocc()" class="hover:text-white transition duration-200 text-2xl font-extralight cursor-pointer">Visit</p>
-                        </div>
+                        
+                            <img src="./images/lcLogo.png" id="km" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer"
+                            onclick="gotolc()" 
+                            onmouseenter="this.classList.add('white-shadow')" 
+                            onmouseleave="this.classList.remove('white-shadow')">
+                        
 
-                        <div class="flex flex-col justify-center items-center gap-y-5">
-                            <img src="./images/lcLogo.png" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
-                            <p onclick="gotolc()" class="hover:text-white transition duration-200  text-2xl font-extralight cursor-pointer">Visit</p>
-                        </div>
-
-                        <div class="flex flex-col justify-center items-center gap-y-5">
-                            <img src="./images/gfg.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full">
-                            <p onclick="gotogfg()" class="hover:text-white transition duration-200  text-2xl font-extralight cursor-pointer">Visit</p>
-                        </div> 
-
+                        
+                            <img src="./images/gfg.jpeg" id="km" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer"
+                            onclick="gotogfg()" 
+                            onmouseenter="this.classList.add('white-shadow')" 
+                            onmouseleave="this.classList.remove('white-shadow')">
+                    </div>
+                    <p class="text-xl">Click to visit !</p>
                 </div>
                 <div class="w-full text-white flex flex-col gap-y-5 lg:w-[45%] text-xl md:text-xl items-center lg:items-start appR">
                     <p class="text-2xl md:text-3xl"><span class="text-4xl">Solved</span> 400+ problems across different platforms:</p>
@@ -466,6 +488,7 @@
             backSpeed:50,
             backDelay:1000,
         });
+
 </script>
 </body>
 </html>
