@@ -168,44 +168,44 @@ function gotomail(){
     window.open('mailto:paras.w@somaiya.edu?subject=Interact%20with%20me');
 }
 
-function gotoabout(){
+function gotoabout(flag){
     abt.scrollIntoView({
         behavior:'smooth'
     })
-    hide();
+    if(flag) hide();
 }
-function gototop(){
+function gototop(flag){
     navbar.scrollIntoView({
         behavior:'smooth'
     })
-    hide();
+    if(flag) hide();
 }
 
-function gotomyskills(){
+function gotomyskills(flag){
     myskills.scrollIntoView({
         behavior:'smooth'
     })
-    hide();
+    if(flag) hide();
 }
 
-function gotodsa(){
+function gotodsa(flag){
     dsa.scrollIntoView({
         behavior:'smooth'
     })
-    hide();
+    if(flag) hide();
 }
 
-function gotoprojects(){
+function gotoprojects(flag){
     document.querySelector('#myprojects').scrollIntoView({
         behavior:'smooth'
     })
-    hide();
+    if(flag) hide();
 }
-function gotocontactme(){
+function gotocontactme(flag){
     footer.scrollIntoView({
         behavior:'smooth'
     })
-    hide();
+    if(flag) hide();
 }
 function hide(){
     document.querySelector('#menubar').classList.add('goback');
