@@ -7,6 +7,8 @@ const right=document.querySelector('#right');
 const abt=document.querySelector('#aboutme')
 const footer=document.querySelector('#footer');
 const myskills=document.querySelector('#myskills');
+const navbar=document.querySelector('#navbar');
+const dsa=document.querySelector('#dsa');
 
 const techimages=[
     "techimg5","techimg6","techimg7","techimg8","techimg9","techimg10","techimg11","techimg12","techimg1","techimg2","techimg3","techimg4"
@@ -172,9 +174,22 @@ function gotoabout(){
     })
     hide();
 }
+function gototop(){
+    navbar.scrollIntoView({
+        behavior:'smooth'
+    })
+    hide();
+}
 
 function gotomyskills(){
     myskills.scrollIntoView({
+        behavior:'smooth'
+    })
+    hide();
+}
+
+function gotodsa(){
+    dsa.scrollIntoView({
         behavior:'smooth'
     })
     hide();
@@ -192,13 +207,21 @@ function gotocontactme(){
     })
     hide();
 }
-
-
 function hide(){
     document.querySelector('#menubar').classList.add('goback');
+    document.querySelector('#floater').classList.toggle('toggle-hide');
+    document.querySelector('#floater2').classList.toggle('toggle-hide');
 }
 
-
-document.querySelector('#floater').addEventListener('click',()=>{
-    document.querySelector('#menubar').classList.remove('goback');
+document.querySelector('#floater').addEventListener('click',(e)=>{
+    document.querySelector('#menubar').classList.toggle('goback');
+    document.querySelector('#floater').classList.toggle('toggle-hide');
+    document.querySelector('#floater2').classList.toggle('toggle-hide');
 })
+
+document.querySelector('#floater2').addEventListener('click',(e)=>{
+    document.querySelector('#menubar').classList.toggle('goback');
+    document.querySelector('#floater').classList.toggle('toggle-hide');
+    document.querySelector('#floater2').classList.toggle('toggle-hide');
+})
+

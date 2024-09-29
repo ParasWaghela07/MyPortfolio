@@ -28,6 +28,13 @@
             scroll-behavior: smooth;
         }
 
+        body{
+            user-select: none; 
+            -webkit-user-select: none; 
+            -moz-user-select: none; 
+            -ms-user-select: none; 
+        }
+
         body::-webkit-scrollbar {
             display: none;
         }
@@ -219,22 +226,49 @@
         .goback{
             transform: translateX(-100vw);
         }
+
+        .toggle-hide{
+            display: none;
+        }
        
     </style>
 </head>
 <body class="overflow-x-hidden">
-    <img src="./images/cv.png" class="rounded-full w-[50px] fixed z-10 cursor-pointer left-7 top-7 sm:hidden animate-bounce" id="floater">
-    <div class="w-[100vw] h-[100%] bg-[#1a1818f4] fixed z-20 flex flex-col justify-center items-center transition duration-300 goback mulish" id="menubar">
-        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gotomyskills()">Skills</p>
-        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gotoprojects()">Projects</p>
+
+   <div class="group">
+    <img src="./images/image.png" class="rounded-full w-[40px] h-[40px] p-[2px] fixed z-20 cursor-pointer bg-white left-7 top-7" id="floater">
+    <p class=" fixed z-20 cursor-pointer text-white left-7 top-[4.5rem] transition duration-200 opacity-0 group-hover:opacity-100">Menu</p>
+   </div>
+   
+    <button id="floater2" class="rounded-full w-[40px] h-[40px] p-[2px] fixed z-20 cursor-pointer bg-white left-7 top-7 toggle-hide"><i class="fa-solid fa-arrow-left text-3xl lg:text-4xl text-black"></i></button>
+
+    <div class="w-[100vw] h-[100%] bg-[#1a1818f4] fixed z-10 flex flex-col justify-center items-center goback transition duration-300  mulish" id="menubar">
+        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gototop()">Home</p>
         <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gotoabout()">About</p>
-        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gotocontactme()">Contact me</p>
+        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gotomyskills()">Techstack</p>
+        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gotodsa()">DSA</p>
+        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gotoprojects()">Projects</p>
+        <div class="w-full flex justify-evenly sm:justify-center sm:gap-x-20 mt-5 items-center">
+            <div class="flex flex-col justify-center items-center gap-y-2 group">
+                <img src="./images/li.png" class="w-[30px] h-[30px] rounded-full cursor-pointer" onclick="gotoli()">
+                <p class="text-sm opacity-0 text-white transition duration-200 group-hover:opacity-100">LinkedIn</p>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-y-2 group">
+                <img src="./images/github.png" class="w-[50px] h-[50px] rounded-full cursor-pointer" onclick="gotogithub()">
+                <p class="text-sm opacity-0 text-white transition duration-200 group-hover:opacity-100">Github</p>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-y-2 group">
+                <img src="./images/mail.png" class="bg-white p-1 w-[30px] h-[30px] rounded-full cursor-pointer" onclick="gotomail()">
+                <p class="text-sm opacity-0 text-white transition duration-200 group-hover:opacity-100">Mail</p>
+            </div>
+        </div>
         <!-- <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer">Resume</p> -->
-        <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="hide()">Back</p>
     </div>
+
+
     <div class="w-[100vw] h-[100%] " style="background-color: var(--dark-color);">
         <!-- NAVBAR -->
-        <div class="w-full justify-center items-center py-6 hidden sm:block">
+        <div class="w-full justify-center items-center py-6 hidden sm:block" id="navbar">
             <div class="w-[90%]  flex sm:justify-end justify-center gap-x-10 flex-wrap" style="color: var(--gray-color);">
                 <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU" onclick="gotomyskills()">Skills</p>
                 <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition-all duration-200 appU1" onclick="gotoprojects()">Projects</p>
@@ -309,7 +343,7 @@
          </div>
 
          <!-- DSA -->
-         <div class="max-w-[1200px] w-[80%] mx-auto mt-52 gap-y-10 flex flex-col">
+         <div class="max-w-[1200px] w-[80%] mx-auto mt-52 gap-y-10 flex flex-col" id="dsa">
             <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden lg:block" style="background-color: var(--lightGray-color);"></div>
                 <p class="text-4xl lg:text-5xl" style="color:var(--gray-color)">Data Structures <br>& Algorithms</p>
@@ -318,21 +352,21 @@
             <div class="flex w-full items-center justify-between flex-col lg:flex-row gap-10">
                 <div class="w-full lg:w-[45%] flex flex-col h-full gap-y-10 items-center appL" style="color: var(--gray-color);">
                     <div class="w-full flex justify-evenly">
-                        <img src="./images/codechef.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer"
+                        <img src="./images/codechef.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer transition duration-200"
                             onclick="gotocc()" 
                             onmouseenter="this.classList.add('white-shadow')" 
                             onmouseleave="this.classList.remove('white-shadow')">
                         
 
                         
-                            <img src="./images/lcLogo.png" id="km" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer"
+                            <img src="./images/lcLogo.png" id="km" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer transition duration-200"
                             onclick="gotolc()" 
                             onmouseenter="this.classList.add('white-shadow')" 
                             onmouseleave="this.classList.remove('white-shadow')">
                         
 
                         
-                            <img src="./images/gfg.jpeg" id="km" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer"
+                            <img src="./images/gfg.jpeg" id="km" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer transition duration-200"
                             onclick="gotogfg()" 
                             onmouseenter="this.classList.add('white-shadow')" 
                             onmouseleave="this.classList.remove('white-shadow')">
