@@ -235,12 +235,15 @@
 </head>
 <body class="overflow-x-hidden">
 
-   <div class="group">
-    <img src="./images/image.png" class="rounded-full w-[40px] h-[40px] p-[2px] fixed z-20 cursor-pointer bg-[#d4d4d4] left-7 top-7" id="floater">
-    <p class=" fixed z-20 cursor-pointer text-white left-7 top-[4.5rem] transition duration-200 opacity-0 group-hover:opacity-100">Menu</p>
+   <div class="group fixed left-7 top-7  z-20 cursor-pointer" id="g1">
+    <img src="./images/image.png" class="rounded-full w-[40px] h-[40px] p-[2px] bg-[#d4d4d4] " id="floater">
+    <p class="cursor-pointer text-white transition duration-200 opacity-0 group-hover:opacity-100 text-center">Menu</p>
    </div>
 
-    <button id="floater2" class="rounded-full w-[40px] h-[40px] p-[2px] fixed z-20 cursor-pointer bg-[#d4d4d4] left-7 top-7 toggle-hide"><i class="fa-solid fa-arrow-left text-3xl lg:text-4xl text-black"></i></button>
+   <div class="group fixed left-7 top-7  z-20 toggle-hide cursor-pointer" id="g2">
+    <button id="floater2" class="rounded-full w-[40px] h-[40px] p-[2px] bg-[#d4d4d4]"><i class="fa-solid fa-arrow-left text-3xl lg:text-4xl text-black"></i></button>
+    <p class="cursor-pointer text-white  transition duration-200 opacity-0 group-hover:opacity-100 text-center">Back</p>
+   </div>
 
     <div class="w-[100vw] h-[100%] bg-[#1a1818f4] fixed z-10 flex flex-col justify-center items-center goback transition duration-300  mulish" id="menubar">
         <p class="text-3xl w-full text-center py-5 text-white hover:bg-[rgb(237,237,237,0.1)] transition duration-200 cursor-pointer" onclick="gototop(true)">Home</p>

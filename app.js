@@ -209,19 +209,19 @@ function gotocontactme(flag){
 }
 function hide(){
     document.querySelector('#menubar').classList.add('goback');
-    document.querySelector('#floater').classList.toggle('toggle-hide');
-    document.querySelector('#floater2').classList.toggle('toggle-hide');
+    document.querySelector('#g1').classList.toggle('toggle-hide');
+    document.querySelector('#g2').classList.toggle('toggle-hide');
 }
 
 document.querySelector('#floater').addEventListener('click',(e)=>{
     document.querySelector('#menubar').classList.toggle('goback');
-    document.querySelector('#floater').classList.toggle('toggle-hide');
-    document.querySelector('#floater2').classList.toggle('toggle-hide');
+    document.querySelector('#g1').classList.add('toggle-hide');
+    document.querySelector('#g2').classList.remove('toggle-hide');
 })
 
 document.querySelector('#floater2').addEventListener('click',(e)=>{
     document.querySelector('#menubar').classList.toggle('goback');
-    document.querySelector('#floater').classList.toggle('toggle-hide');
-    document.querySelector('#floater2').classList.toggle('toggle-hide');
+    document.querySelector('#g2').classList.add('toggle-hide');
+    document.querySelector('#g1').classList.remove('toggle-hide');
 })
 
