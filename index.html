@@ -233,16 +233,14 @@
        
     </style>
 </head>
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden mulish">
 
-   <div class="group fixed left-7 top-7  z-20 cursor-pointer" id="g1">
-    <img src="./images/image.png" class="rounded-full w-[40px] h-[40px] p-[2px] bg-[#d4d4d4] " id="floater">
-    <p class="cursor-pointer text-white transition duration-200 opacity-0 group-hover:opacity-100 text-center">Menu</p>
+   <div class="group absolute left-7 top-7  z-20 cursor-pointer" id="g1">
+    <img src="./images/icons8-hamburger.svg" class="w-[40px] h-[40px] p-[2px]" id="floater">
    </div>
 
-   <div class="group fixed left-7 top-7  z-20 toggle-hide cursor-pointer" id="g2">
-    <button id="floater2" class="rounded-full w-[40px] h-[40px] p-[2px] bg-[#d4d4d4]"><i class="fa-solid fa-arrow-left text-3xl lg:text-4xl text-black"></i></button>
-    <p class="cursor-pointer text-white  transition duration-200 opacity-0 group-hover:opacity-100 text-center">Back</p>
+   <div class="group absolute left-7 top-7  z-20 toggle-hide cursor-pointer" id="g2">
+    <button id="floater2" class="rounded-full w-[40px] h-[40px] p-[2px]"><i class="fa-solid fa-arrow-left text-3xl lg:text-4xl text-white"></i></button>
    </div>
 
     <div class="w-[100vw] h-[100%] bg-[#1a1818f4] fixed z-10 flex flex-col justify-center items-center goback transition duration-300  mulish" id="menubar">
@@ -283,10 +281,10 @@
         <!-- HERO-SECTION -->
         <div class="max-w-[1200px] w-[90%] mx-auto flex flex-col-reverse pt-16 sm:pt-0 justify-center lg:justify-around items-center lg:flex-row lg:mt-20">
             <div id="welcome" class="md:w-[50%] w-full text-center md:text-left">
-                <p class="lg:text-5xl text-2xl w-full text-[#747474] leading-[60px] roboto-slab font-semibold hover:text-white transition duration-300">Hello, It's <br> <span class="role "></span></p>
+                <p class="lg:text-5xl text-2xl w-full leading-[60px] font-semibold text-white transition duration-300">Hello, It's <br> <span class="role "></span></p>
             </div>
             <div class="" id="myimg">
-                <img src="./images/magicpattern-blob-1720808616133.png" alt="" class="md:w-[450px] md:h-[450px]">
+                <img src="./images/magicpattern-blob-1720808109189.png" alt="" class="md:w-[450px] md:h-[450px]">
             </div>
             <!-- <div class="flex flex-col gap-5" id="res">
                     <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">res.status(200).json({</p>
@@ -297,7 +295,7 @@
         </div>
 
         <!-- ABOUT ME -->
-         <div class="max-w-[1200px] w-[80%] mx-auto flex flex-col gap-y-5 mulish mt-52" id="aboutme">
+         <div class="max-w-[1200px] w-[80%] mx-auto flex flex-col gap-y-5 mulish mt-32" id="aboutme">
             <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden md:block" style="background-color: var(--lightGray-color);"></div>
                 <p class=" text-4xl lg:text-5xl" style="color:var(--gray-color)">About Me</p>
@@ -315,7 +313,7 @@
          </div>
 
         <!-- MY TECHSTACK -->
-         <div class="max-w-[1200px] w-[80%] mx-auto mt-52 flex flex-col gap-y-10" id="myskills">
+         <div class="max-w-[1200px] w-[80%] mx-auto  mt-32 flex flex-col gap-y-10" id="myskills">
             <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden md:block" style="background-color: var(--lightGray-color);"></div>
                 <p class=" text-4xl lg:text-5xl" style="color:var(--gray-color)">My TechStack</p>
@@ -346,7 +344,7 @@
          </div>
 
          <!-- DSA -->
-         <div class="max-w-[1200px] w-[80%] mx-auto mt-52 gap-y-10 flex flex-col" id="dsa">
+         <div class="max-w-[1200px] w-[80%] mx-auto  mt-32 gap-y-10 flex flex-col" id="dsa">
             <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden lg:block" style="background-color: var(--lightGray-color);"></div>
                 <p class="text-4xl lg:text-5xl" style="color:var(--gray-color)">Data Structures <br>& Algorithms</p>
@@ -386,7 +384,7 @@
          </div>
 
          <!-- PROJECTS -->
-         <div class="max-w-[750px] xl:max-w-[1200px] w-[80%] mx-auto mt-52 gap-y-10 flex flex-col" id="myprojects">
+         <div class="max-w-[750px] xl:max-w-[1200px] w-[80%] mx-auto mt-32 gap-y-10 flex flex-col" id="myprojects">
             <div class="flex w-full justify-center items-center gap-20 py-5 app">
                 <div class="w-[20%] h-[2px] hidden lg:block" style="background-color: var(--lightGray-color);"></div>
                 <p class="text-4xl lg:text-5xl" style="color:var(--gray-color)">My Projects</p>
@@ -401,7 +399,7 @@
                     <div class="flex flex-col justify-between h-[55%] gap-y-7 xl:gap-y-2">
                         <div>
                             <div class="flex justify-between items-center">
-                                <div class="text-white mulish font-bold text-2xl">Auth-Enabled Cart</div>
+                                <div class="text-white mulish font-bold text-2xl uppercase">Auth-Enabled Cart</div>
                                 <div class="flex justify-center items-center gap-x-2">
                                     <img src="./images/github.png" alt="" class="w-[55px] hover:opacity-70 transition duration-200 cursor-pointer" onclick="gotocartrepo()">
                                 </div>
@@ -421,7 +419,7 @@
                     <div class="flex flex-col justify-between h-[55%] gap-y-7 xl:gap-y-2">
                         <div>
                             <div class="flex justify-between items-center">
-                                <div class="text-white mulish font-bold text-2xl">Notes Manager</div>
+                                <div class="text-white mulish font-bold text-2xl uppercase">Notes Manager</div>
                                 <div class="flex justify-center items-center gap-x-2">
                                     <img src="./images/github.png" alt="" class="w-[55px] hover:opacity-70 transition duration-200 cursor-pointer" onclick="gotonotesrepo()">
                                 </div>
@@ -446,7 +444,7 @@
                     <div class="flex flex-col justify-between h-[55%] gap-y-7 xl:gap-y-2">
                         <div>
                             <div class="flex justify-between items-center">
-                                <div class="text-white mulish font-bold text-2xl">MAP TRACK</div>
+                                <div class="text-white mulish font-bold text-2xl uppercase">Map Track</div>
                                 <div class="flex justify-center items-center gap-x-2">
                                     <i class="fa-solid fa-link text-3xl hover:opacity-70 transition duration-200 cursor-pointer" style="color: #ffffff;" onclick="gotomapgame()"></i>
                                     <img src="./images/github.png" alt="" class="w-[55px] hover:opacity-70 transition duration-200 cursor-pointer" onclick="gotomaprepo()">
@@ -468,7 +466,7 @@
                     <div class="flex flex-col justify-between h-[55%] gap-y-7 xl:gap-y-2">
                         <div>
                             <div class="flex justify-between items-center">
-                                <div class="text-white mulish font-bold text-2xl">MEMORY MATH</div>
+                                <div class="text-white mulish font-bold text-2xl uppercase">Memory Math</div>
                                 <div class="flex justify-center items-center gap-x-2">
                                     <i class="fa-solid fa-link text-3xl hover:opacity-70 transition duration-200 cursor-pointer" style="color: #ffffff;" onclick="gotomathgame()"></i>
                                     <img src="./images/github.png" alt="" class="w-[55px] hover:opacity-70 transition duration-200 cursor-pointer" onclick="gotomathrepo()">
