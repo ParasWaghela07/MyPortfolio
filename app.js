@@ -188,6 +188,7 @@ function gotomyskills(flag){
     if(flag) hide();
 }
 
+
 function gotodsa(flag){
     dsa.scrollIntoView({
         behavior:'smooth'
@@ -201,12 +202,12 @@ function gotoprojects(flag){
     })
     if(flag) hide();
 }
-function gotocontactme(flag){
-    footer.scrollIntoView({
-        behavior:'smooth'
-    })
-    if(flag) hide();
-}
+// function gotocontactme(flag){
+//     footer.scrollIntoView({
+//         behavior:'smooth'
+//     })
+//     if(flag) hide();
+// }
 function hide(){
     document.querySelector('#menubar').classList.add('goback');
     document.querySelector('#g1').classList.toggle('toggle-hide');
