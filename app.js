@@ -120,16 +120,16 @@ function gotocc(){
     window.open('https://www.codechef.com/users/paraswaghela77');
 }
 
-function gotomapgame(){
-    window.open('https://paraswaghela07.github.io/MINI-PROJECT/map_game/map.html')
+function gotominigame(){
+    window.open('https://paraswaghela07.github.io/Lets_play/main.html')
 }
 
 function gotomathgame(){
     window.open('https://paraswaghela07.github.io/MINI-PROJECT/memory_math/homepage.html');
 }
 
-function gotomaprepo(){
-    window.open('https://github.com/ParasWaghela07/MINI-PROJECT/tree/main/map_game')
+function gotominigamerepo(){
+    window.open('https://github.com/ParasWaghela07/Lets_play')
 }
 
 function gotomathrepo(){
