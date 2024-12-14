@@ -243,6 +243,10 @@
         .toggle-hide{
             display: none;
         }
+
+        #visit{
+            letter-spacing: 3px;
+        }
        
     </style>
 </head>
@@ -383,41 +387,38 @@
          </div>
 
         <!-- DSA -->
-        <div class="max-w-[1200px] w-[80%] mx-auto  mt-32 gap-y-10 flex flex-col" id="dsa">
+        <div class="max-w-[1200px] w-[80%] mx-auto  mt-32 gap-y-10 flex flex-col items-center" id="dsa">
                     <div class="flex w-full justify-center items-center gap-20 py-5 app">
                         <div class="w-[20%] h-[2px] hidden lg:block" style="background-color: var(--lightGray-color);"></div>
                         <p class="text-4xl lg:text-5xl" style="color:var(--gray-color)">Data Structures <br>& Algorithms</p>
                         <div class="w-[20%] h-[2px] bg-red-300 lg:block hidden" style="background-color: var(--lightGray-color);"></div>
                     </div>
-                    <div class="flex w-full items-center justify-between flex-col lg:flex-row gap-10">
-                        <div class="w-full lg:w-[45%] flex flex-col h-full gap-y-10 items-center appL" style="color: var(--gray-color);">
-                            <div class="w-full flex justify-evenly">
-                                <img src="./images/codechef.jpeg" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer transition duration-200"
-                                    onclick="gotocc()" 
-                                    onmouseenter="this.classList.add('white-shadow')" 
-                                    onmouseleave="this.classList.remove('white-shadow')">
-                                
-        
-                                
-                                    <img src="./images/lcLogo.png" id="km" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer transition duration-200"
-                                    onclick="gotolc()" 
-                                    onmouseenter="this.classList.add('white-shadow')" 
-                                    onmouseleave="this.classList.remove('white-shadow')">
-                                
-        
-                                
-                                    <img src="./images/gfg.jpeg" id="km" class="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] rounded-full cursor-pointer transition duration-200"
-                                    onclick="gotogfg()" 
-                                    onmouseenter="this.classList.add('white-shadow')" 
-                                    onmouseleave="this.classList.remove('white-shadow')">
+                    <div class="flex w-full justify-evenly flex-wrap items-center flex-col lg:flex-row gap-10 rounded-xl py-2">
+
+                        <div class="flex flex-col  justify-around items-center px-8 py-4 rounded-xl gap-y-5 bg-gray-400/[0.1] hover:bg-gray-400/[0.2] transition duration-200 order-3 lg:order-1">
+                            <img src="./images/gfg_og.png" class="p-4 w-[120px] h-[120px] bg-gray-50/[0.9] rounded-full">
+                            <div class="flex flex-col items-center gap-y-2">
+                                <p class="text-white font-bold text-xl">50+ Problems</p>
                             </div>
-                            <p class="text-xl">Click to visit !</p>
+                            <button class="w-full hover:text-black hover:bg-white/[0.8] font-bold text-white bg-black/[0.8] transition duration-200 text-xl px-2 py-1 rounded-md">Check Out</button>
                         </div>
-                        <div class="w-full text-white flex flex-col gap-y-5 lg:w-[45%] text-xl md:text-xl items-center lg:items-start appR">
-                            <p class="text-2xl md:text-3xl"><span class="text-4xl">Solved</span> 400+ problems across different platforms:</p>
-                            <p> - LeetCode</p>
-                            <p> - CodeChef</p>
-                            <p> - GeeksforGeeks</p>
+
+                        <div class="flex flex-col  justify-around items-center px-8 py-4 rounded-xl gap-y-5 bg-gray-400/[0.1] hover:bg-gray-400/[0.2] transition duration-200 order-1 lg:order-2">
+                            <img src="./images/leetcode_og.png" class="w-[120px] h-[120px] bg-gray-50/[0.9] rounded-full">
+                            <div class="flex flex-col items-center gap-y-2">
+                                <p class="text-white font-bold text-xl">400+ Problems</p>
+                                <p class="text-white font-bold text-xl">5 Badges</p>
+                                <p class="text-white font-bold text-xl">Global rank : 1.5L</p>
+                            </div>
+                            <button  class="w-full hover:text-black hover:bg-white/[0.8] font-bold text-white bg-black/[0.8] transition duration-200 text-xl px-2 py-1 rounded-md ">Check Out</button>
+                        </div>
+
+                        <div class="flex flex-col  justify-around items-center px-8 py-4 rounded-xl gap-y-5 bg-gray-400/[0.1] hover:bg-gray-400/[0.2] transition duration-200 order-2 lg:order-3">
+                            <img src="./images/codechef_og.png" class="p-4 w-[120px] h-[120px] bg-gray-50/[0.9] rounded-full">
+                            <div class="flex flex-col items-center gap-y-2">
+                                <p class="text-white font-bold text-xl">150+ Problems</p>
+                            </div>
+                            <button class="w-full hover:text-black hover:bg-white/[0.8] font-bold text-white bg-black/[0.8] transition duration-200 text-xl px-2 py-1 rounded-md">Check Out</button>
                         </div>
                     </div>
         </div>
