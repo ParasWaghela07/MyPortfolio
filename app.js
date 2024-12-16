@@ -202,12 +202,13 @@ function gotoprojects(flag){
     })
     if(flag) hide();
 }
-// function gotocontactme(flag){
-//     footer.scrollIntoView({
-//         behavior:'smooth'
-//     })
-//     if(flag) hide();
-// }
+function gotocerti(flag){
+    document.querySelector('#mycerti').scrollIntoView({
+        behavior:'smooth'
+    })
+    if(flag) hide();
+}
+
 function hide(){
     document.querySelector('#menubar').classList.add('goback');
     document.querySelector('#g1').classList.toggle('toggle-hide');
