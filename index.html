@@ -247,7 +247,12 @@
         #visit{
             letter-spacing: 3px;
         }
-       
+
+        .role-wrapper {
+            display: inline-block;
+            height: 250px; /* Adjust based on the largest text */
+            overflow: hidden;
+        }       
     </style>
 </head>
 <body class="overflow-x-hidden mulish">
@@ -288,7 +293,7 @@
 
     <div class="w-[100vw] h-[100%] " style="background-color: var(--dark-color);">
         <!-- NAVBAR -->
-        <div class="w-full justify-center items-center py-6 hidden sm:block" id="navbar">
+        <div class="w-full justify-center items-center py-6 opacity-0 sm:opacity-100" id="navbar">
             
             <div class="w-[90%]  flex sm:justify-end justify-center gap-x-10 flex-wrap" style="color: var(--gray-color);">
                 <p class="lg:text-4xl text-2xl font-extralight cursor-pointer hover:text-white transition duration-200 appU2" onclick="gotoabout()">About</p>
@@ -309,20 +314,19 @@
         </div>
         
         <!-- HERO-SECTION -->
-        <div class="max-w-[1200px] w-[90%] mx-auto flex flex-col-reverse pt-16 sm:pt-0 justify-center lg:justify-around items-center lg:flex-row lg:mt-20">
-            <div id="welcome" class="md:w-[50%] w-full text-center md:text-left">
-                <p class="lg:text-5xl text-2xl text-center lg:text-left w-full leading-[60px] font-semibold text-white transition duration-300">Hello, It's <br> <span class="role "></span></p>
+        <div class="max-w-[1200px] w-[90%] mx-auto flex justify-center items-center mt-24">
+            <div class="md:w-[50%] w-full flex flex-col justify-center items-center md:items-start text-center md:text-left text-5xl leading-[70px] font-semibold text-white transition duration-300 h-[250px]">
+                Hello, It's <br> 
+                <span class="role-wrapper"><span class="role"></span></span>
             </div>
-            <div class="" id="myimg">
+            
+        
+            <div class="hidden md:block" id="myimg">
                 <img src="./images/magicpattern-blob-1720808616133.png" alt="" class="sm:w-[450px] md:h-[450px]">
             </div>
-            <!-- <div class="flex flex-col gap-5" id="res">
-                    <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">res.status(200).json({</p>
-                    <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">Name:`Paras Waghela`,</p>
-                    <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">Role:`Full Stack Developer`</p>
-                    <p class=" sm:text-2xl  mulish" id="typeWrite" style="color:var(--gray-color)">)}</p>
-            </div> -->
         </div>
+        
+        
 
         <!-- ABOUT ME -->
          <div class="max-w-[1200px] w-[80%] mx-auto flex flex-col gap-y-5 mulish mt-32" id="aboutme">
@@ -578,8 +582,8 @@
 <script>
             var typeData = new Typed(".role",{
             strings:[
-                "Paras Waghela",
-                "Full Stack Developer"
+                "Paras <br/> Waghela",
+                "Full Stack <br/> Developer"
             ],
             loop:true,
             typeSpeed:50,
