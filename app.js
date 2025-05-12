@@ -11,7 +11,7 @@ const navbar=document.querySelector('#navbar');
 const dsa=document.querySelector('#dsa');
 
 const techimages=[
-    "techimg5","techimg6","techimg7","techimg8","techimg4","techimg9","techimg10","techimg11","techimg12","techimg1","techimg2","techimg3"
+    "techimg5","techimg6","techimg7","techimg8","techimg4","techimg9","techimg10","techimg11","techimg12","techimg13","techimg1","techimg2","techimg3"
 ]
 const techdetails=[
     "MongoDB is my go-to for flexible and scalable NoSQL database solutions, essential for storing and managing data.",
@@ -23,6 +23,7 @@ const techdetails=[
     "C++ provides me with a cleaner and more efficient way to tackle online coding problems, especially when it comes to data structures and algorithms.",
     "Vercel provides me with a smoother and easier way to deploy my project's frontend, simplifying both hosting and configuration.",
     "Render helps me easily host my backend and simplifies the configuration with the frontend, making the deployment process more efficient and manageable.",
+    "Firebase provides backend services like auth, database, and hosting, enabling pure client-side projects with easy deployment.",
     "HTML serves as the fundamental structure for webpages, making it easier for me to integrate with CSS, JavaScript, and various CSS libraries.",
     "CSS allows me to style and design webpages, enhancing their visual appeal and layout.",
     "JavaScript enables me to add interactive elements and dynamic features to webpages, making them more engaging."
@@ -128,12 +129,20 @@ function gotomathgame(){
     window.open('https://paraswaghela07.github.io/MINI-PROJECT/memory_math/homepage.html');
 }
 
+function gotobookify(){
+    window.open('https://bookify-4c8bf.web.app');
+}
+
 function gotominigamerepo(){
     window.open('https://github.com/ParasWaghela07/Lets_play')
 }
 
 function gotomathrepo(){
     window.open('https://github.com/ParasWaghela07/MEMORY_MATH');
+}
+
+function gotobookifyrepo(){
+    window.open('https://github.com/ParasWaghela07/Bookify');
 }
 
 function gotocartrepo(){
