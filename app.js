@@ -153,6 +153,14 @@ function gotonotesrepo(){
     window.open('https://github.com/ParasWaghela07/NotesApp');
 }
 
+function gotoairepo(){
+    window.open('https://github.com/ParasWaghela07/AI-Assistant');
+}
+
+function gotointerwinrepo(){
+    window.open('https://github.com/ParasWaghela07/PrepDSA')
+}
+
 // function gotocartgame(){
 //     window.open('https://shopping-cart-ten-liard.vercel.app/');
 // }
